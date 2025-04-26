@@ -1,4 +1,4 @@
-class_name Bowl extends TextureRect
+class_name Bowl extends TextureButton
 
 
 enum State {EMPTY, UNFINISHED, FUCKEDUP, FINISHED, MIXING_REQUIRED}
@@ -10,6 +10,7 @@ const MISKA_FUJKA: Texture2D = preload("uid://bf2dq7ypc0klm")
 const MISKA_UNFINISHED: Texture2D = preload("uid://b154k02fuvy6c")
 const MISKA_KOGEL: Texture2D = preload("uid://dvayr3ss2sv73")
 const MISKA_OMLET: Texture2D = preload("uid://cjmteni0v0ovt")
+const LYZKA_ICON: Texture2D = preload("uid://usx8f17ljl2h")
 
 
 var contents: Dictionary[String, int] = {
@@ -29,19 +30,15 @@ var state: State = State.EMPTY:
 			State.FUCKEDUP:
 
 				output = load("uid://wu6lfxhyx6ck")
-				texture = MISKA_FUJKA
-
-			State.MIXING_REQUIRED:
-
-				mix_button.show()
+				texture_normal = MISKA_FUJKA
 
 			State.UNFINISHED:
 
-				texture = MISKA_UNFINISHED
+				texture_normal = MISKA_UNFINISHED
 
 			State.EMPTY:
 
-				texture = MISKA
+				texture_normal = MISKA
 				contents["eggs"] = 0
 				contents["sugar"] = 0
 				contents["broccoli"] = 0
@@ -51,21 +48,24 @@ var state: State = State.EMPTY:
 
 				if output.get_meta(&"what") == Output.OMLET:
 
-					texture = MISKA_OMLET
+					texture_normal = MISKA_OMLET
 
 				elif output.get_meta(&"what") == Output.KOGEL:
 
-					texture = MISKA_KOGEL
+					texture_normal = MISKA_KOGEL
+
+			State.MIXING_REQUIRED:
+
+				Input.set_custom_mouse_cursor(LYZKA_ICON)
 
 var output: ItemData
 
 
-@onready var mix_button: Button = %MixButton
-
-
 func _ready() -> void:
 
-	mix_button.pressed.connect(_on_mix_button_pressed)
+	pressed.connect(_on_bowl_pressed)
+	mouse_entered.connect(_on_mouse_entered)
+	mouse_exited.connect(_on_mouse_exited)
 
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
@@ -137,7 +137,7 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	preview.add_child(preview_texture)
 	preview.z_index = 99
 	set_drag_preview(preview)
-	texture = MISKA
+	texture_normal = MISKA
 	return output
 
 
@@ -151,26 +151,26 @@ func _notification(what: int) -> void:
 
 				State.FUCKEDUP:
 
-					texture = MISKA_FUJKA
+					texture_normal = MISKA_FUJKA
 
 				State.FINISHED:
 
 					if output.get_meta(&"what") == Output.OMLET:
 
-						texture = MISKA_OMLET
+						texture_normal = MISKA_OMLET
 
 					elif output.get_meta(&"what") == Output.KOGEL:
 
-						texture = MISKA_KOGEL
+						texture_normal = MISKA_KOGEL
 
-		elif texture == MISKA:
+		elif texture_normal == MISKA:
 
 			state = State.EMPTY
 
 
-func _on_mix_button_pressed() -> void:
+func _on_bowl_pressed() -> void:
 
-	mix_button.hide()
+	Input.set_custom_mouse_cursor(null)
 	if contents["eggs"] == 1 and contents["sugar"] == 1:
 
 		output = load("uid://bbtuoga42htye")
@@ -182,3 +182,15 @@ func _on_mix_button_pressed() -> void:
 		output.set_meta(&"what", Output.OMLET)
 
 	state = State.FINISHED
+
+
+func _on_mouse_entered() -> void:
+
+	if state == State.MIXING_REQUIRED:
+
+		Input.set_custom_mouse_cursor(LYZKA_ICON)
+
+
+func _on_mouse_exited() -> void:
+
+	Input.set_custom_mouse_cursor(null)
