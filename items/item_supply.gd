@@ -1,7 +1,16 @@
-class_name ItemSupply extends TextureRect
+class_name ItemSupply extends Control
+
+
+const HAND_ICON: Texture2D = preload("uid://b441vvkqypjj3")
 
 
 @export var item_data: ItemData
+
+
+func _ready() -> void:
+
+	mouse_entered.connect(_on_mouse_entered)
+	mouse_exited.connect(_on_mouse_exited)
 
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
@@ -17,3 +26,13 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	preview.z_index = 99
 	set_drag_preview(preview)
 	return item_data.duplicate()
+
+
+func _on_mouse_entered() -> void:
+
+	Input.set_custom_mouse_cursor(HAND_ICON)
+
+
+func _on_mouse_exited() -> void:
+
+	Input.set_custom_mouse_cursor(null)

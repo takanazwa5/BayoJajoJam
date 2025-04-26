@@ -1,21 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bjgc8hno8kvux"]
+[gd_scene load_steps=7 format=3 uid="uid://bjgc8hno8kvux"]
 
-[ext_resource type="Texture2D" uid="uid://cx4afth26gwx2" path="res://items/assets/brokul.png" id="1_5fe2l"]
-[ext_resource type="Texture2D" uid="uid://bc7nonddc01rq" path="res://items/assets/cukier.png" id="2_4esre"]
+[ext_resource type="Texture2D" uid="uid://jo0atp0084he" path="res://views/fridge/assets/BGlodowka.png" id="1_h0w0x"]
 [ext_resource type="Script" uid="uid://bp6fx3ssxnaru" path="res://items/item_supply.gd" id="2_p3eeh"]
 [ext_resource type="Resource" uid="uid://doif7hiq7adfr" path="res://items/item_data/brokul.tres" id="3_fa4kh"]
-[ext_resource type="Texture2D" uid="uid://cgjyecjbw3xgs" path="res://items/assets/jajo.png" id="3_p3eeh"]
-[ext_resource type="Texture2D" uid="uid://cr8l5bnwvu4eg" path="res://items/assets/pomidor.png" id="4_5iivk"]
 [ext_resource type="Resource" uid="uid://d30s64k5cg7pm" path="res://items/item_data/cukier.tres" id="5_ah73h"]
 [ext_resource type="Resource" uid="uid://b346kb7qxfq60" path="res://items/item_data/jajo.tres" id="7_h0w0x"]
 [ext_resource type="Resource" uid="uid://cgdmuopjig6nt" path="res://items/item_data/pomidor.tres" id="9_ah73h"]
-
-[sub_resource type="Gradient" id="Gradient_w60s7"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_a3ir5"]
-gradient = SubResource("Gradient_w60s7")
-width = 640
-height = 360
 
 [node name="Fridge" type="Control"]
 layout_mode = 3
@@ -32,59 +22,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_a3ir5")
+texture = ExtResource("1_h0w0x")
 
-[node name="Label" type="Label" parent="BG"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -11.5
-offset_right = 23.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "fridge"
-
-[node name="Brokul" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 413.0
+[node name="Brokul" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 39.0
 offset_top = 229.0
-offset_right = 545.0
+offset_right = 143.0
 offset_bottom = 327.0
-texture = ExtResource("1_5fe2l")
 script = ExtResource("2_p3eeh")
 item_data = ExtResource("3_fa4kh")
 
-[node name="Cukier" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 297.0
-offset_top = 253.0
-offset_right = 389.0
-offset_bottom = 338.0
-texture = ExtResource("2_4esre")
+[node name="Cukier" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 194.0
+offset_top = 72.0
+offset_right = 288.0
+offset_bottom = 145.0
 script = ExtResource("2_p3eeh")
 item_data = ExtResource("5_ah73h")
 
-[node name="Jajo" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 487.0
-offset_top = 168.0
-offset_right = 526.0
-offset_bottom = 224.0
-texture = ExtResource("3_p3eeh")
+[node name="Jajo" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 344.0
+offset_top = 48.0
+offset_right = 637.0
+offset_bottom = 339.0
 script = ExtResource("2_p3eeh")
 item_data = ExtResource("7_h0w0x")
 
-[node name="Pomidor" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 460.0
-offset_top = 62.0
-offset_right = 529.0
-offset_bottom = 143.0
-texture = ExtResource("4_5iivk")
+[node name="Pomidor" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 144.0
+offset_top = 241.0
+offset_right = 262.0
+offset_bottom = 334.0
 script = ExtResource("2_p3eeh")
 item_data = ExtResource("9_ah73h")
