@@ -33,6 +33,19 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
 
+[file_customization]
+
+folder_colors={
+"res://cookbook/": "red",
+"res://deska/": "orange",
+"res://inventory/": "yellow",
+"res://items/": "green",
+"res://miska/": "teal",
+"res://shared/": "blue",
+"res://view_switcher/": "pink",
+"res://views/": "purple"
+}
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
