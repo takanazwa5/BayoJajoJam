@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://77go706q5sb7"]
+[gd_scene load_steps=9 format=3 uid="uid://77go706q5sb7"]
 
 [ext_resource type="Script" uid="uid://cgyhm103hgbym" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bjgc8hno8kvux" path="res://views/fridge/fridge.tscn" id="2_1bvp3"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bw7teu3517o6d" path="res://views/orders/orders.tscn" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://bshxnhl2qsinq" path="res://inventory/inventory.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cbvv7fth7ullu" path="res://view_switcher/view_switcher.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://dm2lyfto0obo4" path="res://cookbook/cookbook.tscn" id="8_5vw27"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ig7tw")
@@ -39,3 +40,5 @@ visible = false
 
 [node name="ViewSwitcher" parent="." instance=ExtResource("6_7mycd")]
 unique_name_in_owner = true
+
+[node name="Cookbook" parent="." instance=ExtResource("8_5vw27")]

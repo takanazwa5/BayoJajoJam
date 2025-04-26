@@ -11,12 +11,10 @@ class_name ViewSwitcher extends Control
 
 func fade_in() -> void:
 
-	color_rect.show()
 	animation_player.play(&"fade_in")
+	await animation_player.animation_finished
 
 
 func fade_out() -> void:
 
-	animation_player.play_backwards(&"fade_in")
-	await animation_player.animation_finished
-	color_rect.hide()
+	animation_player.play(&"fade_out")

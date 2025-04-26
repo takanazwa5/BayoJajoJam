@@ -1,8 +1,35 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbvv7fth7ullu"]
+[gd_scene load_steps=8 format=3 uid="uid://cbvv7fth7ullu"]
 
 [ext_resource type="Script" uid="uid://c73yra6x1xfvm" path="res://view_switcher/view_switcher.gd" id="1_ny4xg"]
 [ext_resource type="Texture2D" uid="uid://cjxpc5lajqt57" path="res://inventory/assets/strzalka-alt-button.png" id="2_qkdpp"]
 [ext_resource type="Texture2D" uid="uid://dv8iwr4v33ark" path="res://inventory/assets/strzalka-button.png" id="2_tmro5"]
+
+[sub_resource type="Animation" id="Animation_58uee"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_qkdpp"]
 resource_name = "fade_in"
@@ -20,26 +47,53 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
-[sub_resource type="Animation" id="Animation_58uee"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_osyu2"]
+resource_name = "fade_out"
+length = 0.25
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0)]
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_osyu2"]
 _data = {
 &"RESET": SubResource("Animation_58uee"),
-&"fade_in": SubResource("Animation_qkdpp")
+&"fade_in": SubResource("Animation_qkdpp"),
+&"fade_out": SubResource("Animation_osyu2")
 }
 
 [node name="ViewSwitcher" type="Control"]
