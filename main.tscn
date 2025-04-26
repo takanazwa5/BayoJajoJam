@@ -11,10 +11,7 @@
 [node name="Main" type="Node"]
 script = ExtResource("1_ig7tw")
 
-[node name="GameLayer" type="CanvasLayer" parent="."]
-layer = 0
-
-[node name="Views" type="Control" parent="GameLayer"]
+[node name="Views" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,25 +19,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Stove" parent="GameLayer/Views" instance=ExtResource("3_lquwl")]
+[node name="Stove" parent="Views" instance=ExtResource("3_lquwl")]
 unique_name_in_owner = true
 visible = false
 
-[node name="Workstation" parent="GameLayer/Views" instance=ExtResource("4_7mycd")]
+[node name="Workstation" parent="Views" instance=ExtResource("4_7mycd")]
 unique_name_in_owner = true
 
-[node name="Fridge" parent="GameLayer/Views" instance=ExtResource("2_1bvp3")]
+[node name="Fridge" parent="Views" instance=ExtResource("2_1bvp3")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
 
-[node name="Orders" parent="GameLayer/Views" instance=ExtResource("5_272bh")]
+[node name="Orders" parent="Views" instance=ExtResource("5_272bh")]
 unique_name_in_owner = true
 visible = false
 
-[node name="UILayer" type="CanvasLayer" parent="."]
+[node name="Inventory" parent="." instance=ExtResource("5_lquwl")]
 
-[node name="Inventory" parent="UILayer" instance=ExtResource("5_lquwl")]
-
-[node name="ViewSwitcher" parent="UILayer" instance=ExtResource("6_7mycd")]
+[node name="ViewSwitcher" parent="." instance=ExtResource("6_7mycd")]
 unique_name_in_owner = true
