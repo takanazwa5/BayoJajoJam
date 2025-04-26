@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx4afth26gwx2"
-path="res://.godot/imported/brokul.png-b051b923933c4fb3026d92c5b97be395.ctex"
+uid="uid://d1qcmdo8jymtl"
+path="res://.godot/imported/deska.png-8ace9521b9dae991ea84b65dba599a0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://views/fridge/assets/brokul.png"
-dest_files=["res://.godot/imported/brokul.png-b051b923933c4fb3026d92c5b97be395.ctex"]
+source_file="res://deska/assets/deska.png"
+dest_files=["res://.godot/imported/deska.png-8ace9521b9dae991ea84b65dba599a0f.ctex"]
 
 [params]
 

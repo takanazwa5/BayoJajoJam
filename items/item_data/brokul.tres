@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://doif7hiq7adfr"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://doif7hiq7adfr"]
 
-[ext_resource type="Texture2D" uid="uid://ccmng7ks3ih1o" path="res://items/assets/brokulEQ.png" id="1_rcmjq"]
-[ext_resource type="Script" uid="uid://crueomtp7trxi" path="res://items/item_data.gd" id="1_svhin"]
+[ext_resource type="Texture2D" uid="uid://ccmng7ks3ih1o" path="res://items/assets/brokulEQ.png" id="1_74cbg"]
+[ext_resource type="Resource" uid="uid://borrpbv2nyr4y" path="res://items/item_data/brokul_pokrojony.tres" id="2_pkdub"]
+[ext_resource type="Script" uid="uid://crueomtp7trxi" path="res://items/item_data.gd" id="3_l20p7"]
+[ext_resource type="Texture2D" uid="uid://cx4afth26gwx2" path="res://items/assets/brokul.png" id="4_pkdub"]
 
 [resource]
-script = ExtResource("1_svhin")
-icon = ExtResource("1_rcmjq")
+script = ExtResource("3_l20p7")
+sprite = ExtResource("4_pkdub")
+icon = ExtResource("1_74cbg")
+can_be_cut = true
+item_after_cutting = ExtResource("2_pkdub")
 metadata/_custom_type_script = "uid://crueomtp7trxi"

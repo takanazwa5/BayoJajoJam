@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr8l5bnwvu4eg"
-path="res://.godot/imported/pomidor.png-4a84b2916766d4aee6c0efdd2c5b6512.ctex"
+uid="uid://cgjyecjbw3xgs"
+path="res://.godot/imported/jajo.png-9874ce351d628a9f1728da588276bf01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://views/fridge/assets/pomidor.png"
-dest_files=["res://.godot/imported/pomidor.png-4a84b2916766d4aee6c0efdd2c5b6512.ctex"]
+source_file="res://items/assets/jajo.png"
+dest_files=["res://.godot/imported/jajo.png-9874ce351d628a9f1728da588276bf01.ctex"]
 
 [params]
 
