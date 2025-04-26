@@ -1,9 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbvv7fth7ullu"]
 
 [ext_resource type="Script" uid="uid://c73yra6x1xfvm" path="res://view_switcher/view_switcher.gd" id="1_ny4xg"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_lquwl"]
-size = Vector2(20, 20)
+[ext_resource type="Texture2D" uid="uid://dv8iwr4v33ark" path="res://inventory/assets/strzalka-button.png" id="2_tmro5"]
 
 [node name="ViewSwitcher" type="Control"]
 layout_mode = 3
@@ -12,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_ny4xg")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -29,7 +28,7 @@ theme_override_constants/margin_left = 10
 unique_name_in_owner = true
 layout_mode = 2
 action_mode = 0
-texture_normal = SubResource("PlaceholderTexture2D_lquwl")
+texture_normal = ExtResource("2_tmro5")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -49,7 +48,7 @@ theme_override_constants/margin_right = 10
 unique_name_in_owner = true
 layout_mode = 2
 action_mode = 0
-texture_normal = SubResource("PlaceholderTexture2D_lquwl")
+texture_normal = ExtResource("2_tmro5")
 
 [node name="MarginContainer3" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -66,7 +65,7 @@ theme_override_constants/margin_top = 10
 unique_name_in_owner = true
 layout_mode = 2
 action_mode = 0
-texture_normal = SubResource("PlaceholderTexture2D_lquwl")
+texture_normal = ExtResource("2_tmro5")
 
 [node name="MarginContainer4" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -87,4 +86,6 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 action_mode = 0
-texture_normal = SubResource("PlaceholderTexture2D_lquwl")
+texture_normal = ExtResource("2_tmro5")
+flip_h = true
+flip_v = true

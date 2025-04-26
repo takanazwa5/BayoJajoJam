@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cgdmuopjig6nt"]
+
+[ext_resource type="Texture2D" uid="uid://dofxptmgg4dnu" path="res://items/assets/pomidorEQ.png" id="1_j0c6l"]
+[ext_resource type="Script" uid="uid://crueomtp7trxi" path="res://items/item_data.gd" id="2_4i76p"]
+
+[resource]
+script = ExtResource("2_4i76p")
+icon = ExtResource("1_j0c6l")
+metadata/_custom_type_script = "uid://crueomtp7trxi"

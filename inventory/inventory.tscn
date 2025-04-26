@@ -1,8 +1,14 @@
-[gd_scene format=3 uid="uid://bshxnhl2qsinq"]
+[gd_scene load_steps=5 format=3 uid="uid://bshxnhl2qsinq"]
+
+[ext_resource type="Script" uid="uid://dqgip4ntxrcpb" path="res://inventory/inventory.gd" id="1_62wf1"]
+[ext_resource type="Texture2D" uid="uid://bqyj22huddo00" path="res://inventory/assets/trashcan-closed.png" id="2_lhcfm"]
+[ext_resource type="PackedScene" uid="uid://cjy44so0r353r" path="res://inventory/inventory_slot.tscn" id="2_qse2j"]
+[ext_resource type="Script" uid="uid://qik1qnpunlaj" path="res://inventory/trashcan.gd" id="3_wbsyq"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_62wf1")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -14,18 +20,21 @@ theme_override_constants/margin_top = 10
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 20)
+[node name="Trashcan" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_lhcfm")
+stretch_mode = 3
+script = ExtResource("3_wbsyq")
+
+[node name="InventorySlot" parent="MarginContainer/HBoxContainer" instance=ExtResource("2_qse2j")]
 layout_mode = 2
 
-[node name="ColorRect2" type="ColorRect" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 20)
+[node name="InventorySlot2" parent="MarginContainer/HBoxContainer" instance=ExtResource("2_qse2j")]
 layout_mode = 2
 
-[node name="ColorRect3" type="ColorRect" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 20)
+[node name="InventorySlot3" parent="MarginContainer/HBoxContainer" instance=ExtResource("2_qse2j")]
 layout_mode = 2
 
-[node name="ColorRect4" type="ColorRect" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 20)
+[node name="InventorySlot4" parent="MarginContainer/HBoxContainer" instance=ExtResource("2_qse2j")]
 layout_mode = 2

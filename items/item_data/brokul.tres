@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://doif7hiq7adfr"]
+
+[ext_resource type="Texture2D" uid="uid://ccmng7ks3ih1o" path="res://items/assets/brokulEQ.png" id="1_rcmjq"]
+[ext_resource type="Script" uid="uid://crueomtp7trxi" path="res://items/item_data.gd" id="1_svhin"]
+
+[resource]
+script = ExtResource("1_svhin")
+icon = ExtResource("1_rcmjq")
+metadata/_custom_type_script = "uid://crueomtp7trxi"
