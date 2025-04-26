@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://r4ucx3ggx272"]
 
 [ext_resource type="PackedScene" uid="uid://ckt18pc2pxtlo" path="res://deska/cutting_board.tscn" id="1_0jq2i"]
-[ext_resource type="Texture2D" uid="uid://bpt8i2d2334sq" path="res://shared/BG_Base.png" id="1_ng4il"]
+[ext_resource type="Texture2D" uid="uid://bpt8i2d2334sq" path="res://views/workstation/assets/BG_Base.png" id="1_ng4il"]
 [ext_resource type="PackedScene" uid="uid://igstmgi4psu" path="res://miska/bowl.tscn" id="2_4tu5v"]
 
 [node name="Workstation" type="Control"]

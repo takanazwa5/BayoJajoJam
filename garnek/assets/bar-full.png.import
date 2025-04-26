@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crtptr63l2pfs"
-path="res://.godot/imported/Garnek.png-b26dc886a843a95ff274570fcff22bfa.ctex"
+uid="uid://bkfp32q4pgdao"
+path="res://.godot/imported/bar-full.png-21c6bcaa54fe18440fa416eeb9824b73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://views/stove/assets/Garnek.png"
-dest_files=["res://.godot/imported/Garnek.png-b26dc886a843a95ff274570fcff22bfa.ctex"]
+source_file="res://garnek/assets/bar-full.png"
+dest_files=["res://.godot/imported/bar-full.png-21c6bcaa54fe18440fa416eeb9824b73.ctex"]
 
 [params]
 

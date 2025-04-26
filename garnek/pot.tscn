@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw8ofy0df5kai"]
+
+[ext_resource type="Texture2D" uid="uid://crtptr63l2pfs" path="res://garnek/assets/Garnek.png" id="1_665b5"]
+[ext_resource type="Script" uid="uid://b00o2ibs2yl2y" path="res://garnek/pot.gd" id="2_y8p1j"]
+[ext_resource type="Texture2D" uid="uid://bbw0iuoyw3r6l" path="res://garnek/assets/bar-empty.png" id="3_r2diu"]
+[ext_resource type="Texture2D" uid="uid://bkfp32q4pgdao" path="res://garnek/assets/bar-full.png" id="4_mtt5j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r2diu"]
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Pot" type="TextureRect"]
+offset_right = 234.0
+offset_bottom = 161.0
+texture = ExtResource("1_665b5")
+script = ExtResource("2_y8p1j")
+
+[node name="ProgressBar" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = 17.5
+offset_right = 64.0
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 10.0
+value = 5.0
+texture_under = ExtResource("3_r2diu")
+texture_progress = ExtResource("4_mtt5j")
+
+[node name="Label" type="Label" parent="ProgressBar"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 26.0
+offset_top = -23.0
+offset_right = 101.0
+text = "COOKING"
+label_settings = SubResource("LabelSettings_r2diu")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true

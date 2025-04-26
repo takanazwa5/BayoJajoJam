@@ -34,10 +34,10 @@ window/stretch/mode="viewport"
 folder_colors={
 "res://cookbook/": "red",
 "res://deska/": "orange",
+"res://garnek/": "pink",
 "res://inventory/": "yellow",
 "res://items/": "green",
 "res://miska/": "teal",
-"res://shared/": "blue",
 "res://view_switcher/": "pink",
 "res://views/": "purple"
 }
