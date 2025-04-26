@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://wu6lfxhyx6ck"]
+
+[ext_resource type="Script" uid="uid://crueomtp7trxi" path="res://items/item_data.gd" id="1_27ct0"]
+[ext_resource type="Texture2D" uid="uid://nxr1wqo2xgum" path="res://items/assets/fujkaEQ.png" id="1_x7wbx"]
+
+[resource]
+script = ExtResource("1_27ct0")
+type = 4
+icon = ExtResource("1_x7wbx")
+can_be_cut = false
+metadata/_custom_type_script = "uid://crueomtp7trxi"

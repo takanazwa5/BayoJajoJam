@@ -7,6 +7,7 @@
 
 [resource]
 script = ExtResource("3_l20p7")
+type = 3
 sprite = ExtResource("4_pkdub")
 icon = ExtResource("1_74cbg")
 can_be_cut = true

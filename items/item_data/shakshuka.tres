@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dmobuqrx2l26q"]
+
+[ext_resource type="Script" uid="uid://crueomtp7trxi" path="res://items/item_data.gd" id="1_ck3mu"]
+[ext_resource type="Texture2D" uid="uid://dweme08tq4na3" path="res://items/assets/shakshukaEQ.png" id="1_xminw"]
+
+[resource]
+script = ExtResource("1_ck3mu")
+type = 4
+icon = ExtResource("1_xminw")
+can_be_cut = false
+metadata/_custom_type_script = "uid://crueomtp7trxi"

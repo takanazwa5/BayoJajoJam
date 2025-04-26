@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://igstmgi4psu"]
+
+[ext_resource type="Texture2D" uid="uid://dug8j58tsqalh" path="res://miska/assets/Miska.png" id="1_n27n6"]
+[ext_resource type="Script" uid="uid://c7687qia5urf1" path="res://miska/bowl.gd" id="2_wrfo6"]
+
+[node name="Bowl" type="TextureRect"]
+texture = ExtResource("1_n27n6")
+stretch_mode = 2
+script = ExtResource("2_wrfo6")
