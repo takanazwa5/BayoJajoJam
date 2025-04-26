@@ -1,0 +1,86 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbvv7fth7ullu"]
+
+[ext_resource type="Script" uid="uid://c73yra6x1xfvm" path="res://view_switcher/view_switcher.gd" id="1_ny4xg"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_lquwl"]
+size = Vector2(20, 20)
+
+[node name="ViewSwitcher" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ny4xg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -10.0
+offset_right = 30.0
+offset_bottom = 10.0
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+
+[node name="LeftButton" type="TextureButton" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_lquwl")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -10.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_right = 10
+
+[node name="RightButton" type="TextureButton" parent="MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_lquwl")
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -10.0
+offset_right = 10.0
+offset_bottom = 30.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 10
+
+[node name="UpButton" type="TextureButton" parent="MarginContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_lquwl")
+
+[node name="MarginContainer4" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -30.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 10
+
+[node name="DownButton" type="TextureButton" parent="MarginContainer4"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_lquwl")

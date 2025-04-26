@@ -1,6 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://77go706q5sb7"]
+[gd_scene load_steps=8 format=3 uid="uid://77go706q5sb7"]
 
 [ext_resource type="Script" uid="uid://cgyhm103hgbym" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bjgc8hno8kvux" path="res://views/fridge/fridge.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bkh2nk2f1t3kw" path="res://views/stove/stove.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://r4ucx3ggx272" path="res://views/workstation/workstation.tscn" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bw7teu3517o6d" path="res://views/orders/orders.tscn" id="5_272bh"]
+[ext_resource type="PackedScene" uid="uid://bshxnhl2qsinq" path="res://inventory/inventory.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cbvv7fth7ullu" path="res://view_switcher/view_switcher.tscn" id="6_7mycd"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ig7tw")
+
+[node name="Views" type="Node2D" parent="."]
+
+[node name="Stove" parent="Views" instance=ExtResource("3_lquwl")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Workstation" parent="Views" instance=ExtResource("4_7mycd")]
+unique_name_in_owner = true
+
+[node name="Fridge" parent="Views" instance=ExtResource("2_1bvp3")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Orders" parent="Views" instance=ExtResource("5_272bh")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Inventory" parent="." instance=ExtResource("5_lquwl")]
+
+[node name="ViewSwitcher" parent="." instance=ExtResource("6_7mycd")]
+unique_name_in_owner = true

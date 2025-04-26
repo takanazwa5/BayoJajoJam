@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://r4ucx3ggx272"]
+
+[sub_resource type="Gradient" id="Gradient_cba3g"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a3ir5"]
+gradient = SubResource("Gradient_cba3g")
+width = 640
+height = 360
+
+[node name="Workstation" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_a3ir5")
+centered = false
+
+[node name="Label" type="Label" parent="Sprite2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.5
+offset_top = -11.5
+offset_right = 46.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "workstation"

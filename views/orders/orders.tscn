@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw7teu3517o6d"]
+
+[sub_resource type="Gradient" id="Gradient_w60s7"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gpjyc"]
+gradient = SubResource("Gradient_w60s7")
+width = 640
+height = 360
+
+[node name="Orders" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_gpjyc")
+centered = false
+
+[node name="Label" type="Label" parent="Sprite2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.5
+offset_top = -11.5
+offset_right = 25.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "orders"
