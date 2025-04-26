@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://wu6lfxhyx6ck"]
+
+[ext_resource type="Texture2D" uid="uid://bxfat514b7po6" path="res://items/assets/slimeEQ.png" id="1_n5ewc"]
+[ext_resource type="Script" uid="uid://crueomtp7trxi" path="res://items/item_data.gd" id="2_aghgn"]
+
+[resource]
+script = ExtResource("2_aghgn")
+type = 4
+icon = ExtResource("1_n5ewc")
+can_be_cut = false
+metadata/_custom_type_script = "uid://crueomtp7trxi"
