@@ -7,13 +7,16 @@ gradient = SubResource("Gradient_w60s7")
 width = 640
 height = 360
 
-[node name="Orders" type="Node2D"]
+[node name="Orders" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
 texture = SubResource("GradientTexture2D_gpjyc")
-centered = false
 
-[node name="Label" type="Label" parent="Sprite2D"]
+[node name="Label" type="Label" parent="BG"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

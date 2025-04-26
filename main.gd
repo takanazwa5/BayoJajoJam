@@ -1,15 +1,15 @@
 extends Node
 
 
-@onready var stove: Node2D = %Stove
-@onready var workstation: Node2D = %Workstation
-@onready var fridge: Node2D = %Fridge
-@onready var orders: Node2D = %Orders
+@onready var stove: Control = %Stove
+@onready var workstation: Control = %Workstation
+@onready var fridge: Control = %Fridge
+@onready var orders: Control = %Orders
 @onready var view_switcher: ViewSwitcher = %ViewSwitcher
 
 
-var _current_view: Node2D
-var _previous_view: Node2D
+var _current_view: Control
+var _previous_view: Control
 
 
 func _ready() -> void:
@@ -22,7 +22,7 @@ func _ready() -> void:
 	view_switcher.down_button.pressed.connect(_on_down_button_pressed)
 
 
-func _change_view(view: Node2D) -> void:
+func _change_view(view: Control) -> void:
 
 	_current_view.hide()
 	view.show()

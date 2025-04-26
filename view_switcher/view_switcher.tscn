@@ -28,6 +28,7 @@ theme_override_constants/margin_left = 10
 [node name="LeftButton" type="TextureButton" parent="MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+action_mode = 0
 texture_normal = SubResource("PlaceholderTexture2D_lquwl")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
@@ -47,6 +48,7 @@ theme_override_constants/margin_right = 10
 [node name="RightButton" type="TextureButton" parent="MarginContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
+action_mode = 0
 texture_normal = SubResource("PlaceholderTexture2D_lquwl")
 
 [node name="MarginContainer3" type="MarginContainer" parent="."]
@@ -63,6 +65,7 @@ theme_override_constants/margin_top = 10
 [node name="UpButton" type="TextureButton" parent="MarginContainer3"]
 unique_name_in_owner = true
 layout_mode = 2
+action_mode = 0
 texture_normal = SubResource("PlaceholderTexture2D_lquwl")
 
 [node name="MarginContainer4" type="MarginContainer" parent="."]
@@ -83,4 +86,5 @@ theme_override_constants/margin_bottom = 10
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+action_mode = 0
 texture_normal = SubResource("PlaceholderTexture2D_lquwl")
