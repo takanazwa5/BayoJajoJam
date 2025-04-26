@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjy44so0r353r"]
+[gd_scene load_steps=6 format=3 uid="uid://cjy44so0r353r"]
 
 [ext_resource type="Texture2D" uid="uid://36vgereojh2u" path="res://inventory/assets/EQ-slot.png" id="1_nsnbm"]
 [ext_resource type="Script" uid="uid://btpd4aisrdi83" path="res://inventory/inventory_slot.gd" id="1_refl1"]
+[ext_resource type="AudioStream" uid="uid://cdkcyv80gu8fd" path="res://shared/TakeBase_1.mp3" id="3_7pjcw"]
+[ext_resource type="AudioStream" uid="uid://0jdyf42k0x4e" path="res://shared/TakeBase_2.mp3" id="4_ry1ev"]
+[ext_resource type="AudioStream" uid="uid://bpbpfh26figdp" path="res://shared/TakeBase_3.mp3" id="5_lelqj"]
 
 [node name="InventorySlot" type="TextureRect"]
 custom_minimum_size = Vector2(20, 20)
@@ -19,3 +22,15 @@ offset_right = 46.0
 offset_bottom = 46.0
 mouse_filter = 2
 stretch_mode = 3
+
+[node name="TakeBase1" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_7pjcw")
+
+[node name="TakeBase2" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_ry1ev")
+
+[node name="TakeBase3" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_lelqj")

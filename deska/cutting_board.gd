@@ -20,6 +20,9 @@ var item_on_board: ItemData:
 
 
 @onready var item_slot: TextureButton = %ItemSlot
+@onready var cut_1: AudioStreamPlayer = %Cut1
+@onready var cut_2: AudioStreamPlayer = %Cut2
+@onready var cut_3: AudioStreamPlayer = %Cut3
 
 
 func _ready() -> void:
@@ -86,6 +89,11 @@ func _on_item_slot_pressed() -> void:
 
 		item_on_board = item_on_board.item_after_cutting
 		Input.set_custom_mouse_cursor(null)
+		cut_1.play()
+		await cut_1.finished
+		cut_2.play()
+		await cut_2.finished
+		cut_3.play()
 
 
 func _on_item_slot_mouse_entered() -> void:

@@ -7,6 +7,9 @@ const HAND_ICON: Texture2D = preload("uid://b441vvkqypjj3")
 @export var item_data: ItemData
 
 
+@onready var sfx: Array[AudioStreamPlayer] = [%TakeBase1, %TakeBase2, %TakeBase3]
+
+
 func _ready() -> void:
 
 	mouse_entered.connect(_on_mouse_entered)
@@ -15,6 +18,7 @@ func _ready() -> void:
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 
+	sfx[randi_range(0, 2)].play()
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	var preview_texture: TextureRect = TextureRect.new()
 	preview_texture.texture = item_data.icon

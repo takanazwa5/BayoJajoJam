@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjgc8hno8kvux"]
+[gd_scene load_steps=10 format=3 uid="uid://bjgc8hno8kvux"]
 
 [ext_resource type="Texture2D" uid="uid://jo0atp0084he" path="res://views/fridge/assets/BGlodowka.png" id="1_h0w0x"]
 [ext_resource type="Script" uid="uid://bp6fx3ssxnaru" path="res://items/item_supply.gd" id="2_p3eeh"]
 [ext_resource type="Resource" uid="uid://doif7hiq7adfr" path="res://items/item_data/brokul.tres" id="3_fa4kh"]
 [ext_resource type="Resource" uid="uid://d30s64k5cg7pm" path="res://items/item_data/cukier.tres" id="5_ah73h"]
+[ext_resource type="AudioStream" uid="uid://cdkcyv80gu8fd" path="res://shared/TakeBase_1.mp3" id="7_ah73h"]
 [ext_resource type="Resource" uid="uid://b346kb7qxfq60" path="res://items/item_data/jajo.tres" id="7_h0w0x"]
+[ext_resource type="AudioStream" uid="uid://0jdyf42k0x4e" path="res://shared/TakeBase_2.mp3" id="8_h0w0x"]
 [ext_resource type="Resource" uid="uid://cgdmuopjig6nt" path="res://items/item_data/pomidor.tres" id="9_ah73h"]
+[ext_resource type="AudioStream" uid="uid://bpbpfh26figdp" path="res://shared/TakeBase_3.mp3" id="9_xpbe5"]
 
 [node name="Fridge" type="Control"]
 layout_mode = 3
@@ -59,3 +62,15 @@ offset_right = 262.0
 offset_bottom = 334.0
 script = ExtResource("2_p3eeh")
 item_data = ExtResource("9_ah73h")
+
+[node name="TakeBase1" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_ah73h")
+
+[node name="TakeBase2" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_h0w0x")
+
+[node name="TakeBase3" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("9_xpbe5")

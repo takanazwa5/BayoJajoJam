@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckt18pc2pxtlo"]
+[gd_scene load_steps=6 format=3 uid="uid://ckt18pc2pxtlo"]
 
 [ext_resource type="Texture2D" uid="uid://d1qcmdo8jymtl" path="res://deska/assets/deska.png" id="1_61vet"]
 [ext_resource type="Script" uid="uid://ljhydc5h1wqt" path="res://deska/cutting_board.gd" id="2_rwyhh"]
+[ext_resource type="AudioStream" uid="uid://disux7nhxlfmy" path="res://deska/assets/Cut_1.mp3" id="3_ievid"]
+[ext_resource type="AudioStream" uid="uid://dhrjrw362bpot" path="res://deska/assets/Cut_2.mp3" id="4_xt47t"]
+[ext_resource type="AudioStream" uid="uid://c618bhma7kxwk" path="res://deska/assets/Cut_3.mp3" id="5_5oc2i"]
 
 [node name="CuttingBoard" type="TextureRect"]
 offset_right = 318.0
@@ -22,3 +25,15 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 stretch_mode = 3
+
+[node name="Cut1" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_ievid")
+
+[node name="Cut2" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_xt47t")
+
+[node name="Cut3" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_5oc2i")
