@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dov8u0muu325d"
-path="res://.godot/imported/ksiazka-kucharska-button.png-f0fd57c49df7370b60dd8eaf42e66571.ctex"
+uid="uid://dlwopq4vu1rx7"
+path="res://.godot/imported/universal-button.png-65534b05b2a4ea6c48e55a7ff414e2f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://inventory/assets/ksiazka-kucharska-button.png"
-dest_files=["res://.godot/imported/ksiazka-kucharska-button.png-f0fd57c49df7370b60dd8eaf42e66571.ctex"]
+source_file="res://universal-button.png"
+dest_files=["res://.godot/imported/universal-button.png-65534b05b2a4ea6c48e55a7ff414e2f0.ctex"]
 
 [params]
 

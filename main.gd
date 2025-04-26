@@ -24,8 +24,11 @@ func _ready() -> void:
 
 func _change_view(view: Control) -> void:
 
+	view_switcher.fade_in()
+	await view_switcher.animation_player.animation_finished
 	_current_view.hide()
 	view.show()
+	view_switcher.fade_out()
 	_previous_view = _current_view
 	_current_view = view
 
