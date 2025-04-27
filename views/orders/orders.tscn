@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bw7teu3517o6d"]
+[gd_scene load_steps=6 format=3 uid="uid://bw7teu3517o6d"]
+
+[ext_resource type="Script" uid="uid://btdaqi8ipmdvu" path="res://views/orders/chicks.gd" id="1_deesp"]
 
 [sub_resource type="Gradient" id="Gradient_w60s7"]
 
@@ -6,6 +8,13 @@
 gradient = SubResource("Gradient_w60s7")
 width = 640
 height = 360
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e8glu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_deesp"]
+font_size = 20
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Orders" type="Control"]
 layout_mode = 3
@@ -24,17 +33,37 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_gpjyc")
 
-[node name="Label" type="Label" parent="BG"]
+[node name="Chicks" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -25.5
-offset_top = -11.5
-offset_right = 25.5
-offset_bottom = 11.5
+offset_left = -74.0
+offset_top = -74.0
+offset_right = 74.0
+offset_bottom = 74.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "orders"
+texture = SubResource("PlaceholderTexture2D_e8glu")
+script = ExtResource("1_deesp")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 23.0
+offset_right = 20.0
+offset_bottom = 46.0
+grow_horizontal = 2
+text = "yeet"
+label_settings = SubResource("LabelSettings_deesp")
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Label"]
+unique_name_in_owner = true
+autostart = true

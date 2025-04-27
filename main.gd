@@ -1,4 +1,7 @@
-extends Node
+class_name Main extends Node
+
+
+const GAME_OVER: PackedScene = preload("uid://bw4v87ccf1e2n")
 
 
 @onready var stove: Control = %Stove
@@ -8,8 +11,15 @@ extends Node
 @onready var view_switcher: ViewSwitcher = %ViewSwitcher
 
 
+static var instance: Main
+
 var _current_view: Control
 var _previous_view: Control
+
+
+func _init() -> void:
+
+	instance = self
 
 
 func _ready() -> void:
@@ -20,6 +30,11 @@ func _ready() -> void:
 	view_switcher.right_button.pressed.connect(_on_right_button_pressed)
 	view_switcher.up_button.pressed.connect(_on_up_button_pressed)
 	view_switcher.down_button.pressed.connect(_on_down_button_pressed)
+
+
+func gameover() -> void:
+
+	get_tree().change_scene_to_packed(GAME_OVER)
 
 
 func _change_view(view: Control) -> void:

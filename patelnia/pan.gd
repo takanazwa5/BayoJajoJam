@@ -251,6 +251,7 @@ func _on_mouse_exited() -> void:
 
 func _on_pressed() -> void:
 
+	if not contents["eggs"] == 3 and not stirred: return
 	stirred = true
 	Input.set_custom_mouse_cursor(null)
 	texture_normal = PATELNIA_JAJUWA
