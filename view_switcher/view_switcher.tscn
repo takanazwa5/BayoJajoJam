@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbvv7fth7ullu"]
+[gd_scene load_steps=9 format=3 uid="uid://cbvv7fth7ullu"]
 
 [ext_resource type="Script" uid="uid://c73yra6x1xfvm" path="res://view_switcher/view_switcher.gd" id="1_ny4xg"]
-[ext_resource type="Texture2D" uid="uid://cjxpc5lajqt57" path="res://inventory/assets/strzalka-alt-button.png" id="2_qkdpp"]
-[ext_resource type="Texture2D" uid="uid://dv8iwr4v33ark" path="res://inventory/assets/strzalka-button.png" id="2_tmro5"]
+[ext_resource type="Texture2D" uid="uid://cjxpc5lajqt57" path="res://view_switcher/assets/strzalka-alt-button.png" id="2_qkdpp"]
+[ext_resource type="Texture2D" uid="uid://dv8iwr4v33ark" path="res://view_switcher/assets/strzalka-button.png" id="2_tmro5"]
+[ext_resource type="AudioStream" uid="uid://dfqcud1nytp2g" path="res://view_switcher/assets/Aim.mp3" id="4_58uee"]
 
 [sub_resource type="Animation" id="Animation_58uee"]
 length = 0.001
@@ -202,3 +203,8 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_osyu2")
 }
+
+[node name="Aim" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_58uee")
+bus = &"SFX"

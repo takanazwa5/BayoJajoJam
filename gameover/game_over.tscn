@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bw4v87ccf1e2n"]
+[gd_scene load_steps=6 format=3 uid="uid://bw4v87ccf1e2n"]
 
 [ext_resource type="Script" uid="uid://xguf0qfysmdn" path="res://gameover/game_over.gd" id="1_1stlp"]
 [ext_resource type="Texture2D" uid="uid://c3kwphwrp6jw4" path="res://gameover/assets/game over.png" id="2_6nnvn"]
 [ext_resource type="Texture2D" uid="uid://dlwopq4vu1rx7" path="res://shared/universal-button.png" id="3_ajbo4"]
+[ext_resource type="AudioStream" uid="uid://dx8r3xga3k2vc" path="res://gameover/assets/ChipTuneJajoLoss.mp3" id="4_ajbo4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nh01p"]
 font_size = 30
@@ -75,3 +76,8 @@ label_settings = SubResource("LabelSettings_nh01p")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="ChipTuneJajoLoss" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ajbo4")
+autoplay = true
+bus = &"Music"

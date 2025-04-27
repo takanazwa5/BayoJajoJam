@@ -1,6 +1,9 @@
 class_name Main extends Node
 
 
+const _1HP: Texture2D = preload("uid://cfo4tm0swjaxl")
+const _2HP: Texture2D = preload("uid://dne0w34c588o")
+const _3HP: Texture2D = preload("uid://dgk6sfgmb7cfo")
 const GAME_OVER: PackedScene = preload("uid://bw4v87ccf1e2n")
 
 
@@ -10,12 +13,27 @@ const GAME_OVER: PackedScene = preload("uid://bw4v87ccf1e2n")
 @onready var orders: Control = %Orders
 @onready var view_switcher: ViewSwitcher = %ViewSwitcher
 @onready var time_left: Label = %TimeLeft
+@onready var hp: TextureRect = %HP
+@onready var egg_brick_1: AudioStreamPlayer = %EggBrick1
 
 
 static var instance: Main
 
 var _current_view: Control
 var _previous_view: Control
+var health: int = 3:
+
+	set(value):
+
+		health = value
+		egg_brick_1.play()
+		if health == 2:
+
+			hp.texture = _2HP
+
+		elif health == 1:
+
+			hp.texture = _1HP
 
 
 func _init() -> void:

@@ -11,6 +11,8 @@ const DISHES: Array[ItemData] = [JAJUWA, KOGEL, NAMIEKKO, OMLET, SADZONE, SHAKSH
 const TIME_LIMIT: int = 45
 
 
+var amamam_sfx: Array[AudioStreamPlayer]
+var ueee_sfx: Array[AudioStreamPlayer]
 var fails: int = 0:
 
 	set(value):
@@ -30,13 +32,28 @@ var time_left: int = TIME_LIMIT:
 
 			_generate_new_order()
 			fails += 1
+			Main.instance.health -= 1
 
 
 @onready var timer: Timer = %Timer
 @onready var ready_dish: TextureRect = %ReadyDish
+@onready var ueee: Node = %UEEE
+@onready var am_am_am: Node = %AmAmAm
 
 
 func _ready() -> void:
+
+	for child: Node in am_am_am.get_children():
+
+		if child is AudioStreamPlayer:
+
+			amamam_sfx.append(child)
+
+	for child: Node in ueee.get_children():
+
+		if child is AudioStreamPlayer:
+
+			ueee_sfx.append(child)
 
 	get_parent().visibility_changed.connect(_on_parent_visibility_changed)
 	timer.timeout.connect(_on_timer_timeout)
@@ -87,4 +104,9 @@ func _on_timer_timeout() -> void:
 func _on_parent_visibility_changed() -> void:
 
 	if not get_parent().visible:
+
+		if ready_dish.texture is Texture2D:
+
+			amamam_sfx.pick_random().play()
+
 		ready_dish.texture = null

@@ -199,36 +199,45 @@ script = ExtResource("21_d2gg4")
 
 [node name="Kura1" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("21_xugnh")
+volume_db = 5.0
 bus = &"SFX"
 
 [node name="Kura2" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("22_d2gg4")
+volume_db = 5.0
 bus = &"SFX"
 
 [node name="Kura3" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("23_ucs0g")
+volume_db = 5.0
 bus = &"SFX"
 
 [node name="Kura4" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("24_wywjf")
+volume_db = 5.0
 bus = &"SFX"
 
 [node name="Kura5" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("25_w7yoc")
+volume_db = 5.0
 bus = &"SFX"
 
 [node name="Kura6" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("26_qj611")
+volume_db = 5.0
 bus = &"SFX"
 
 [node name="Kura7" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("27_yr5tk")
+volume_db = 5.0
 bus = &"SFX"
 
 [node name="Kura8" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("28_nnxs8")
+volume_db = 5.0
 bus = &"SFX"
 
 [node name="Kura9" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("29_43af7")
+volume_db = 5.0
 bus = &"SFX"

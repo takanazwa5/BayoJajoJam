@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv8iwr4v33ark"
-path="res://.godot/imported/strzalka-button.png-e6c3176d3e0b226e5fa1d38bbdb10c33.ctex"
+uid="uid://dgk6sfgmb7cfo"
+path="res://.godot/imported/3HP.png-6846440c9c1d48dd9cecaa6c915abccf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://inventory/assets/strzalka-button.png"
-dest_files=["res://.godot/imported/strzalka-button.png-e6c3176d3e0b226e5fa1d38bbdb10c33.ctex"]
+source_file="res://main/assets/3HP.png"
+dest_files=["res://.godot/imported/3HP.png-6846440c9c1d48dd9cecaa6c915abccf.ctex"]
 
 [params]
 
