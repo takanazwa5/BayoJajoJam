@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://y81jsjhbbkkd" path="res://views/stove/assets/BG_Kuchenka.png" id="1_ocp5c"]
 [ext_resource type="PackedScene" uid="uid://cw8ofy0df5kai" path="res://garnek/pot.tscn" id="2_d5gi2"]
-[ext_resource type="Texture2D" uid="uid://c3kuv1bbegemf" path="res://views/stove/assets/Patelnia.png" id="3_n6r45"]
+[ext_resource type="PackedScene" uid="uid://ocnvw3x0qyuf" path="res://patelnia/pan.tscn" id="3_d5gi2"]
 
 [node name="Stove" type="Control"]
 layout_mode = 3
@@ -28,19 +28,9 @@ offset_top = 110.0
 offset_right = 336.0
 offset_bottom = 271.0
 
-[node name="Patelnia" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -148.0
-offset_top = -7.0
-offset_right = 216.0
-offset_bottom = 121.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_n6r45")
-expand_mode = 1
-stretch_mode = 3
+[node name="Patelnia" parent="." instance=ExtResource("3_d5gi2")]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 173.0
+offset_right = 534.0
+offset_bottom = 301.0

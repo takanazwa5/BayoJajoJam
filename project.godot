@@ -38,6 +38,7 @@ folder_colors={
 "res://inventory/": "yellow",
 "res://items/": "green",
 "res://miska/": "teal",
+"res://patelnia/": "red",
 "res://shared/": "yellow",
 "res://view_switcher/": "pink",
 "res://views/": "purple"

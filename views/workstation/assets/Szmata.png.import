@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3kuv1bbegemf"
-path="res://.godot/imported/Patelnia.png-26536126153b0202dae12fac927b0029.ctex"
+uid="uid://533ttnmii265"
+path="res://.godot/imported/Szmata.png-1c1a51686f1118816a0c0d6aef73d24c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://views/stove/assets/Patelnia.png"
-dest_files=["res://.godot/imported/Patelnia.png-26536126153b0202dae12fac927b0029.ctex"]
+source_file="res://views/workstation/assets/Szmata.png"
+dest_files=["res://.godot/imported/Szmata.png-1c1a51686f1118816a0c0d6aef73d24c.ctex"]
 
 [params]
 

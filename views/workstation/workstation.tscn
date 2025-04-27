@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://r4ucx3ggx272"]
+[gd_scene load_steps=5 format=3 uid="uid://r4ucx3ggx272"]
 
 [ext_resource type="PackedScene" uid="uid://ckt18pc2pxtlo" path="res://deska/cutting_board.tscn" id="1_0jq2i"]
 [ext_resource type="Texture2D" uid="uid://bpt8i2d2334sq" path="res://views/workstation/assets/BG_Base.png" id="1_ng4il"]
 [ext_resource type="PackedScene" uid="uid://igstmgi4psu" path="res://miska/bowl.tscn" id="2_4tu5v"]
+[ext_resource type="Texture2D" uid="uid://533ttnmii265" path="res://views/workstation/assets/Szmata.png" id="4_mmxhj"]
 
 [node name="Workstation" type="Control"]
 layout_mode = 3
@@ -20,6 +21,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ng4il")
+
+[node name="Szmata" type="TextureRect" parent="BG"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -118.0
+offset_top = -37.0
+offset_right = 16.0
+offset_bottom = 140.0
+grow_horizontal = 2
+texture = ExtResource("4_mmxhj")
 
 [node name="CuttingBoard" parent="." instance=ExtResource("1_0jq2i")]
 layout_mode = 1

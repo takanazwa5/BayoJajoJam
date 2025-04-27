@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkfp32q4pgdao"
-path="res://.godot/imported/bar-full.png-21c6bcaa54fe18440fa416eeb9824b73.ctex"
+uid="uid://c3kuv1bbegemf"
+path="res://.godot/imported/Patelnia.png-01ee5b2ab2b13b99a4628eea5d902627.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://garnek/assets/bar-full.png"
-dest_files=["res://.godot/imported/bar-full.png-21c6bcaa54fe18440fa416eeb9824b73.ctex"]
+source_file="res://patelnia/assets/Patelnia.png"
+dest_files=["res://.godot/imported/Patelnia.png-01ee5b2ab2b13b99a4628eea5d902627.ctex"]
 
 [params]
 

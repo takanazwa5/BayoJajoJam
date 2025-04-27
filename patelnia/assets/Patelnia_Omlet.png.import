@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbw0iuoyw3r6l"
-path="res://.godot/imported/bar-empty.png-c555a44387380cb446be435043823b94.ctex"
+uid="uid://c3lbrg2f5k50a"
+path="res://.godot/imported/Patelnia_Omlet.png-34819eefc1c648640d11a5008a724961.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://garnek/assets/bar-empty.png"
-dest_files=["res://.godot/imported/bar-empty.png-c555a44387380cb446be435043823b94.ctex"]
+source_file="res://patelnia/assets/Patelnia_Omlet.png"
+dest_files=["res://.godot/imported/Patelnia_Omlet.png-34819eefc1c648640d11a5008a724961.ctex"]
 
 [params]
 

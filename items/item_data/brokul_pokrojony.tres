@@ -10,4 +10,5 @@ type = 2
 sprite = ExtResource("3_ensmn")
 icon = ExtResource("1_kqqy1")
 can_be_cut = false
+can_be_cooked = false
 metadata/_custom_type_script = "uid://crueomtp7trxi"
