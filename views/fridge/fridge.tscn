@@ -1,16 +1,25 @@
-[gd_scene load_steps=12 format=3 uid="uid://bjgc8hno8kvux"]
+[gd_scene load_steps=21 format=3 uid="uid://bjgc8hno8kvux"]
 
 [ext_resource type="Texture2D" uid="uid://cn5pm4u3x4rbu" path="res://views/fridge/assets/BG_lodowkakura.png" id="1_xpbe5"]
 [ext_resource type="Script" uid="uid://bp6fx3ssxnaru" path="res://items/item_supply.gd" id="2_p3eeh"]
 [ext_resource type="Resource" uid="uid://doif7hiq7adfr" path="res://items/item_data/brokul.tres" id="3_fa4kh"]
 [ext_resource type="Resource" uid="uid://d30s64k5cg7pm" path="res://items/item_data/cukier.tres" id="5_ah73h"]
-[ext_resource type="AudioStream" uid="uid://cdkcyv80gu8fd" path="res://shared/TakeBase_1.mp3" id="7_ah73h"]
 [ext_resource type="Resource" uid="uid://b346kb7qxfq60" path="res://items/item_data/jajo.tres" id="7_h0w0x"]
-[ext_resource type="AudioStream" uid="uid://0jdyf42k0x4e" path="res://shared/TakeBase_2.mp3" id="8_h0w0x"]
 [ext_resource type="Resource" uid="uid://cgdmuopjig6nt" path="res://items/item_data/pomidor.tres" id="9_ah73h"]
-[ext_resource type="AudioStream" uid="uid://bpbpfh26figdp" path="res://shared/TakeBase_3.mp3" id="9_xpbe5"]
+[ext_resource type="AudioStream" uid="uid://caxxgsmwm1hmt" path="res://items/assets/sfx/EggBase_1.mp3" id="9_ebhoj"]
 [ext_resource type="Texture2D" uid="uid://dbgfmfsumeggo" path="res://views/fridge/assets/Dymek.png" id="10_dgme0"]
+[ext_resource type="AudioStream" uid="uid://bggfr1dugj7qa" path="res://items/assets/sfx/EggBase_2.mp3" id="10_kaf61"]
 [ext_resource type="Script" uid="uid://dk0l0ch0lhd8k" path="res://views/fridge/dymek.gd" id="11_ssyj6"]
+[ext_resource type="AudioStream" uid="uid://ca4c3xo76yu26" path="res://items/assets/sfx/EggBase_3.mp3" id="11_tmugg"]
+[ext_resource type="AudioStream" uid="uid://cvnj3vvvjmgeq" path="res://items/assets/sfx/TakeBase_1.mp3" id="12_xxs38"]
+[ext_resource type="AudioStream" uid="uid://m7pb23nygmxh" path="res://items/assets/sfx/TakeBase_2.mp3" id="13_xbvkc"]
+[ext_resource type="AudioStream" uid="uid://csqn7uf6fgiqr" path="res://items/assets/sfx/TakeBase_3.mp3" id="14_er2wa"]
+[ext_resource type="AudioStream" uid="uid://jmgiw6vwd5vm" path="res://items/assets/sfx/Cukier_1.mp3" id="15_4avfd"]
+[ext_resource type="AudioStream" uid="uid://cwe2752ambktm" path="res://items/assets/sfx/Cukier_2.mp3" id="16_l2my2"]
+[ext_resource type="AudioStream" uid="uid://d2cfvshds1uyl" path="res://items/assets/sfx/Cukier_3.mp3" id="17_u6v07"]
+[ext_resource type="AudioStream" uid="uid://c5tyrajv7k4hb" path="res://items/assets/sfx/BrokułBase_1.mp3" id="18_xugnh"]
+[ext_resource type="AudioStream" uid="uid://ir1sby5yujsy" path="res://items/assets/sfx/BrokułBase_2.mp3" id="19_d2gg4"]
+[ext_resource type="AudioStream" uid="uid://cfilf1ojdimud" path="res://items/assets/sfx/BrokułBase_3.mp3" id="20_ucs0g"]
 
 [node name="Fridge" type="Control"]
 layout_mode = 3
@@ -29,7 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_xpbe5")
 
-[node name="Brokul" type="Control" parent="."]
+[node name="Brokul" type="Control" parent="." node_paths=PackedStringArray("sfx")]
 anchors_preset = 0
 offset_left = 39.0
 offset_top = 229.0
@@ -37,8 +46,9 @@ offset_right = 143.0
 offset_bottom = 327.0
 script = ExtResource("2_p3eeh")
 item_data = ExtResource("3_fa4kh")
+sfx = [NodePath("../SFX/Brokul/BrokułBase1"), NodePath("../SFX/Brokul/BrokułBase2"), NodePath("../SFX/Brokul/BrokułBase3")]
 
-[node name="Cukier" type="Control" parent="."]
+[node name="Cukier" type="Control" parent="." node_paths=PackedStringArray("sfx")]
 anchors_preset = 0
 offset_left = 208.0
 offset_top = 92.0
@@ -46,8 +56,9 @@ offset_right = 274.0
 offset_bottom = 145.0
 script = ExtResource("2_p3eeh")
 item_data = ExtResource("5_ah73h")
+sfx = [NodePath("../SFX/Cukier/Cukier1"), NodePath("../SFX/Cukier/Cukier2"), NodePath("../SFX/Cukier/Cukier3")]
 
-[node name="Jajo" type="Control" parent="."]
+[node name="Jajo" type="Control" parent="." node_paths=PackedStringArray("sfx")]
 anchors_preset = 0
 offset_left = 344.0
 offset_top = 71.0
@@ -55,8 +66,9 @@ offset_right = 637.0
 offset_bottom = 339.0
 script = ExtResource("2_p3eeh")
 item_data = ExtResource("7_h0w0x")
+sfx = [NodePath("../SFX/Jajo/EggBase1"), NodePath("../SFX/Jajo/EggBase2"), NodePath("../SFX/Jajo/EggBase3")]
 
-[node name="Pomidor" type="Control" parent="."]
+[node name="Pomidor" type="Control" parent="." node_paths=PackedStringArray("sfx")]
 anchors_preset = 0
 offset_left = 144.0
 offset_top = 240.0
@@ -64,18 +76,7 @@ offset_right = 262.0
 offset_bottom = 334.0
 script = ExtResource("2_p3eeh")
 item_data = ExtResource("9_ah73h")
-
-[node name="TakeBase1" type="AudioStreamPlayer" parent="."]
-unique_name_in_owner = true
-stream = ExtResource("7_ah73h")
-
-[node name="TakeBase2" type="AudioStreamPlayer" parent="."]
-unique_name_in_owner = true
-stream = ExtResource("8_h0w0x")
-
-[node name="TakeBase3" type="AudioStreamPlayer" parent="."]
-unique_name_in_owner = true
-stream = ExtResource("9_xpbe5")
+sfx = [NodePath("../SFX/Pomidor/TakeBase1"), NodePath("../SFX/Pomidor/TakeBase2"), NodePath("../SFX/Pomidor/TakeBase3")]
 
 [node name="Dymek" type="TextureRect" parent="."]
 layout_mode = 0
@@ -100,3 +101,61 @@ offset_right = 16.0
 offset_bottom = 8.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Jajo" type="Node" parent="SFX"]
+
+[node name="EggBase1" type="AudioStreamPlayer" parent="SFX/Jajo"]
+unique_name_in_owner = true
+stream = ExtResource("9_ebhoj")
+
+[node name="EggBase2" type="AudioStreamPlayer" parent="SFX/Jajo"]
+unique_name_in_owner = true
+stream = ExtResource("10_kaf61")
+
+[node name="EggBase3" type="AudioStreamPlayer" parent="SFX/Jajo"]
+unique_name_in_owner = true
+stream = ExtResource("11_tmugg")
+
+[node name="Pomidor" type="Node" parent="SFX"]
+
+[node name="TakeBase1" type="AudioStreamPlayer" parent="SFX/Pomidor"]
+unique_name_in_owner = true
+stream = ExtResource("12_xxs38")
+
+[node name="TakeBase2" type="AudioStreamPlayer" parent="SFX/Pomidor"]
+unique_name_in_owner = true
+stream = ExtResource("13_xbvkc")
+
+[node name="TakeBase3" type="AudioStreamPlayer" parent="SFX/Pomidor"]
+unique_name_in_owner = true
+stream = ExtResource("14_er2wa")
+
+[node name="Cukier" type="Node" parent="SFX"]
+
+[node name="Cukier1" type="AudioStreamPlayer" parent="SFX/Cukier"]
+unique_name_in_owner = true
+stream = ExtResource("15_4avfd")
+
+[node name="Cukier2" type="AudioStreamPlayer" parent="SFX/Cukier"]
+unique_name_in_owner = true
+stream = ExtResource("16_l2my2")
+
+[node name="Cukier3" type="AudioStreamPlayer" parent="SFX/Cukier"]
+unique_name_in_owner = true
+stream = ExtResource("17_u6v07")
+
+[node name="Brokul" type="Node" parent="SFX"]
+
+[node name="BrokułBase1" type="AudioStreamPlayer" parent="SFX/Brokul"]
+unique_name_in_owner = true
+stream = ExtResource("18_xugnh")
+
+[node name="BrokułBase2" type="AudioStreamPlayer" parent="SFX/Brokul"]
+unique_name_in_owner = true
+stream = ExtResource("19_d2gg4")
+
+[node name="BrokułBase3" type="AudioStreamPlayer" parent="SFX/Brokul"]
+unique_name_in_owner = true
+stream = ExtResource("20_ucs0g")

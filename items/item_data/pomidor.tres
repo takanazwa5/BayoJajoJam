@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://cgdmuopjig6nt"]
 
-[ext_resource type="Texture2D" uid="uid://dofxptmgg4dnu" path="res://items/assets/pomidorEQ.png" id="1_hf6ad"]
+[ext_resource type="Texture2D" uid="uid://dofxptmgg4dnu" path="res://items/assets/sprites/pomidorEQ.png" id="1_hf6ad"]
 [ext_resource type="Script" uid="uid://crueomtp7trxi" path="res://items/item_data.gd" id="2_74bp4"]
 [ext_resource type="Resource" uid="uid://ber4fxjicvs5f" path="res://items/item_data/pomidor_pokrojony.tres" id="2_festm"]
-[ext_resource type="Texture2D" uid="uid://cr8l5bnwvu4eg" path="res://items/assets/pomidor.png" id="4_festm"]
+[ext_resource type="Texture2D" uid="uid://cr8l5bnwvu4eg" path="res://items/assets/sprites/pomidor.png" id="4_festm"]
 
 [resource]
 script = ExtResource("2_74bp4")
