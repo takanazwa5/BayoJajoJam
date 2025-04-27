@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw4v87ccf1e2n"]
+[gd_scene load_steps=5 format=3 uid="uid://bw4v87ccf1e2n"]
 
 [ext_resource type="Script" uid="uid://xguf0qfysmdn" path="res://gameover/game_over.gd" id="1_1stlp"]
+[ext_resource type="Texture2D" uid="uid://c3kwphwrp6jw4" path="res://gameover/assets/game over.png" id="2_6nnvn"]
+[ext_resource type="Texture2D" uid="uid://dlwopq4vu1rx7" path="res://shared/universal-button.png" id="3_ajbo4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nh01p"]
+font_size = 30
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -11,17 +18,46 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1stlp")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.300781, 0.300781, 0.300781, 1)
+texture = ExtResource("2_6nnvn")
 
-[node name="RetryButton" type="Button" parent="ColorRect"]
+[node name="Label" type="Label" parent="ColorRect"]
 unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = 132.0
+offset_right = 91.0
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Orders completed: yeet"
+horizontal_alignment = 1
+
+[node name="RetryButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_top = 13.0
+offset_right = 112.0
+offset_bottom = 72.0
+grow_horizontal = 2
+texture_normal = ExtResource("3_ajbo4")
+
+[node name="Label" type="Label" parent="RetryButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -34,21 +70,8 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "RETRY"
-
-[node name="Label" type="Label" parent="ColorRect"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -74.5
-offset_top = -61.0
-offset_right = 74.5
-offset_bottom = -38.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Orders completed: yeet"
+text = "Retry"
+label_settings = SubResource("LabelSettings_nh01p")
 horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

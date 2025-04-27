@@ -4,7 +4,7 @@ class_name GameOver extends Control
 static var orders_completed: int = 0
 
 
-@onready var retry_button: Button = %RetryButton
+@onready var retry_button: TextureButton = %RetryButton
 @onready var label: Label = %Label
 
 

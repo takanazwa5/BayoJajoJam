@@ -4,6 +4,7 @@ class_name MainMenu extends Control
 @onready var play_button: Button = %PlayButton
 @onready var credits_button: Button = %CreditsButton
 @onready var how_to_play_button: Button = %HowToPlayButton
+@onready var credits_page: TextureRect = %CreditsPage
 
 
 func _ready() -> void:
@@ -21,7 +22,7 @@ func _on_play_button_pressed() -> void:
 
 func _on_credits_button_pressed() -> void:
 
-	pass
+	credits_page.visible = not credits_page.visible
 
 
 func _on_how_to_play_button_pressed() -> void:

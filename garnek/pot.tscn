@@ -50,3 +50,4 @@ unique_name_in_owner = true
 [node name="Boiling" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("5_mtt5j")
+bus = &"SFX"

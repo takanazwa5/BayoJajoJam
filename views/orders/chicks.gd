@@ -8,7 +8,7 @@ const OMLET: ItemData = preload("uid://d2aogmwvbrqhm")
 const SADZONE: ItemData = preload("uid://bjslote6cn7x7")
 const SHAKSHUKA: ItemData = preload("uid://dmobuqrx2l26q")
 const DISHES: Array[ItemData] = [JAJUWA, KOGEL, NAMIEKKO, OMLET, SADZONE, SHAKSHUKA]
-const TIME_LIMIT: int = 30
+const TIME_LIMIT: int = 45
 
 
 var fails: int = 0:

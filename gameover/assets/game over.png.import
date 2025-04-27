@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlwopq4vu1rx7"
-path="res://.godot/imported/universal-button.png-de9b58591ccd4340a9070acd2671f94d.ctex"
+uid="uid://c3kwphwrp6jw4"
+path="res://.godot/imported/game over.png-b4fef9d037f306c7e6a4d2fb47d83118.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://main_menu/assets/universal-button.png"
-dest_files=["res://.godot/imported/universal-button.png-de9b58591ccd4340a9070acd2671f94d.ctex"]
+source_file="res://gameover/assets/game over.png"
+dest_files=["res://.godot/imported/game over.png-b4fef9d037f306c7e6a4d2fb47d83118.ctex"]
 
 [params]
 

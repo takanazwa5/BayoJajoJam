@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://77go706q5sb7"]
+[gd_scene load_steps=11 format=3 uid="uid://77go706q5sb7"]
 
-[ext_resource type="Script" uid="uid://cgyhm103hgbym" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cgyhm103hgbym" path="res://main/main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bjgc8hno8kvux" path="res://views/fridge/fridge.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bkh2nk2f1t3kw" path="res://views/stove/stove.tscn" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://r4ucx3ggx272" path="res://views/workstation/workstation.tscn" id="4_7mycd"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bshxnhl2qsinq" path="res://inventory/inventory.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cbvv7fth7ullu" path="res://view_switcher/view_switcher.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dm2lyfto0obo4" path="res://cookbook/cookbook.tscn" id="8_5vw27"]
+[ext_resource type="AudioStream" uid="uid://b2raa88kigxim" path="res://main/assets/ChipTuneJajo.mp3" id="9_grrlh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5vw27"]
 shadow_size = 8
@@ -66,3 +67,8 @@ layout_mode = 2
 label_settings = SubResource("LabelSettings_5vw27")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ChipTuneJajo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_grrlh")
+autoplay = true
+bus = &"Music"

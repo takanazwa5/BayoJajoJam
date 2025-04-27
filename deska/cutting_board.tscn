@@ -29,11 +29,14 @@ stretch_mode = 3
 [node name="Cut1" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_ievid")
+bus = &"SFX"
 
 [node name="Cut2" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_xt47t")
+bus = &"SFX"
 
 [node name="Cut3" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("5_5oc2i")
+bus = &"SFX"

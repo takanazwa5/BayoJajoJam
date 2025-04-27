@@ -1,25 +1,25 @@
 [gd_scene load_steps=31 format=3 uid="uid://bjgc8hno8kvux"]
 
 [ext_resource type="Texture2D" uid="uid://cn5pm4u3x4rbu" path="res://views/fridge/assets/BG_lodowkakura.png" id="1_xpbe5"]
-[ext_resource type="Script" uid="uid://bp6fx3ssxnaru" path="res://items/item_supply.gd" id="2_p3eeh"]
+[ext_resource type="Script" uid="uid://bp6fx3ssxnaru" path="res://views/fridge/item_supply.gd" id="2_p3eeh"]
 [ext_resource type="Resource" uid="uid://doif7hiq7adfr" path="res://items/item_data/brokul.tres" id="3_fa4kh"]
 [ext_resource type="Resource" uid="uid://d30s64k5cg7pm" path="res://items/item_data/cukier.tres" id="5_ah73h"]
 [ext_resource type="Resource" uid="uid://b346kb7qxfq60" path="res://items/item_data/jajo.tres" id="7_h0w0x"]
 [ext_resource type="Resource" uid="uid://cgdmuopjig6nt" path="res://items/item_data/pomidor.tres" id="9_ah73h"]
-[ext_resource type="AudioStream" uid="uid://caxxgsmwm1hmt" path="res://items/assets/sfx/EggBase_1.mp3" id="9_ebhoj"]
+[ext_resource type="AudioStream" uid="uid://caxxgsmwm1hmt" path="res://views/fridge/assets/EggBase_1.mp3" id="9_ebhoj"]
 [ext_resource type="Texture2D" uid="uid://dbgfmfsumeggo" path="res://views/fridge/assets/Dymek.png" id="10_dgme0"]
-[ext_resource type="AudioStream" uid="uid://bggfr1dugj7qa" path="res://items/assets/sfx/EggBase_2.mp3" id="10_kaf61"]
+[ext_resource type="AudioStream" uid="uid://bggfr1dugj7qa" path="res://views/fridge/assets/EggBase_2.mp3" id="10_kaf61"]
 [ext_resource type="Script" uid="uid://dk0l0ch0lhd8k" path="res://views/fridge/dymek.gd" id="11_ssyj6"]
-[ext_resource type="AudioStream" uid="uid://ca4c3xo76yu26" path="res://items/assets/sfx/EggBase_3.mp3" id="11_tmugg"]
-[ext_resource type="AudioStream" uid="uid://cvnj3vvvjmgeq" path="res://items/assets/sfx/TakeBase_1.mp3" id="12_xxs38"]
-[ext_resource type="AudioStream" uid="uid://m7pb23nygmxh" path="res://items/assets/sfx/TakeBase_2.mp3" id="13_xbvkc"]
-[ext_resource type="AudioStream" uid="uid://csqn7uf6fgiqr" path="res://items/assets/sfx/TakeBase_3.mp3" id="14_er2wa"]
-[ext_resource type="AudioStream" uid="uid://jmgiw6vwd5vm" path="res://items/assets/sfx/Cukier_1.mp3" id="15_4avfd"]
-[ext_resource type="AudioStream" uid="uid://cwe2752ambktm" path="res://items/assets/sfx/Cukier_2.mp3" id="16_l2my2"]
-[ext_resource type="AudioStream" uid="uid://d2cfvshds1uyl" path="res://items/assets/sfx/Cukier_3.mp3" id="17_u6v07"]
-[ext_resource type="AudioStream" uid="uid://c5tyrajv7k4hb" path="res://items/assets/sfx/BrokułBase_1.mp3" id="18_xugnh"]
-[ext_resource type="AudioStream" uid="uid://ir1sby5yujsy" path="res://items/assets/sfx/BrokułBase_2.mp3" id="19_d2gg4"]
-[ext_resource type="AudioStream" uid="uid://cfilf1ojdimud" path="res://items/assets/sfx/BrokułBase_3.mp3" id="20_ucs0g"]
+[ext_resource type="AudioStream" uid="uid://ca4c3xo76yu26" path="res://views/fridge/assets/EggBase_3.mp3" id="11_tmugg"]
+[ext_resource type="AudioStream" uid="uid://cvnj3vvvjmgeq" path="res://views/fridge/assets/TakeBase_1.mp3" id="12_xxs38"]
+[ext_resource type="AudioStream" uid="uid://m7pb23nygmxh" path="res://views/fridge/assets/TakeBase_2.mp3" id="13_xbvkc"]
+[ext_resource type="AudioStream" uid="uid://csqn7uf6fgiqr" path="res://views/fridge/assets/TakeBase_3.mp3" id="14_er2wa"]
+[ext_resource type="AudioStream" uid="uid://jmgiw6vwd5vm" path="res://views/fridge/assets/Cukier_1.mp3" id="15_4avfd"]
+[ext_resource type="AudioStream" uid="uid://cwe2752ambktm" path="res://views/fridge/assets/Cukier_2.mp3" id="16_l2my2"]
+[ext_resource type="AudioStream" uid="uid://d2cfvshds1uyl" path="res://views/fridge/assets/Cukier_3.mp3" id="17_u6v07"]
+[ext_resource type="AudioStream" uid="uid://c5tyrajv7k4hb" path="res://views/fridge/assets/BrokułBase_1.mp3" id="18_xugnh"]
+[ext_resource type="AudioStream" uid="uid://ir1sby5yujsy" path="res://views/fridge/assets/BrokułBase_2.mp3" id="19_d2gg4"]
+[ext_resource type="AudioStream" uid="uid://cfilf1ojdimud" path="res://views/fridge/assets/BrokułBase_3.mp3" id="20_ucs0g"]
 [ext_resource type="Script" uid="uid://d28wsvn8cfuum" path="res://views/fridge/kura.gd" id="21_d2gg4"]
 [ext_resource type="AudioStream" uid="uid://bctrcqrmuynl" path="res://views/fridge/assets/Kura1.mp3" id="21_xugnh"]
 [ext_resource type="AudioStream" uid="uid://mhwlnhnf4cne" path="res://views/fridge/assets/Kura2.mp3" id="22_d2gg4"]
@@ -119,56 +119,68 @@ grow_vertical = 2
 [node name="EggBase1" type="AudioStreamPlayer" parent="SFX/Jajo"]
 unique_name_in_owner = true
 stream = ExtResource("9_ebhoj")
+bus = &"SFX"
 
 [node name="EggBase2" type="AudioStreamPlayer" parent="SFX/Jajo"]
 unique_name_in_owner = true
 stream = ExtResource("10_kaf61")
+bus = &"SFX"
 
 [node name="EggBase3" type="AudioStreamPlayer" parent="SFX/Jajo"]
 unique_name_in_owner = true
 stream = ExtResource("11_tmugg")
+bus = &"SFX"
 
 [node name="Pomidor" type="Node" parent="SFX"]
 
 [node name="TakeBase1" type="AudioStreamPlayer" parent="SFX/Pomidor"]
 unique_name_in_owner = true
 stream = ExtResource("12_xxs38")
+bus = &"SFX"
 
 [node name="TakeBase2" type="AudioStreamPlayer" parent="SFX/Pomidor"]
 unique_name_in_owner = true
 stream = ExtResource("13_xbvkc")
+bus = &"SFX"
 
 [node name="TakeBase3" type="AudioStreamPlayer" parent="SFX/Pomidor"]
 unique_name_in_owner = true
 stream = ExtResource("14_er2wa")
+bus = &"SFX"
 
 [node name="Cukier" type="Node" parent="SFX"]
 
 [node name="Cukier1" type="AudioStreamPlayer" parent="SFX/Cukier"]
 unique_name_in_owner = true
 stream = ExtResource("15_4avfd")
+bus = &"SFX"
 
 [node name="Cukier2" type="AudioStreamPlayer" parent="SFX/Cukier"]
 unique_name_in_owner = true
 stream = ExtResource("16_l2my2")
+bus = &"SFX"
 
 [node name="Cukier3" type="AudioStreamPlayer" parent="SFX/Cukier"]
 unique_name_in_owner = true
 stream = ExtResource("17_u6v07")
+bus = &"SFX"
 
 [node name="Brokul" type="Node" parent="SFX"]
 
 [node name="BrokułBase1" type="AudioStreamPlayer" parent="SFX/Brokul"]
 unique_name_in_owner = true
 stream = ExtResource("18_xugnh")
+bus = &"SFX"
 
 [node name="BrokułBase2" type="AudioStreamPlayer" parent="SFX/Brokul"]
 unique_name_in_owner = true
 stream = ExtResource("19_d2gg4")
+bus = &"SFX"
 
 [node name="BrokułBase3" type="AudioStreamPlayer" parent="SFX/Brokul"]
 unique_name_in_owner = true
 stream = ExtResource("20_ucs0g")
+bus = &"SFX"
 
 [node name="Kura" type="Button" parent="."]
 unique_name_in_owner = true
@@ -187,27 +199,36 @@ script = ExtResource("21_d2gg4")
 
 [node name="Kura1" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("21_xugnh")
+bus = &"SFX"
 
 [node name="Kura2" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("22_d2gg4")
+bus = &"SFX"
 
 [node name="Kura3" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("23_ucs0g")
+bus = &"SFX"
 
 [node name="Kura4" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("24_wywjf")
+bus = &"SFX"
 
 [node name="Kura5" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("25_w7yoc")
+bus = &"SFX"
 
 [node name="Kura6" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("26_qj611")
+bus = &"SFX"
 
 [node name="Kura7" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("27_yr5tk")
+bus = &"SFX"
 
 [node name="Kura8" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("28_nnxs8")
+bus = &"SFX"
 
 [node name="Kura9" type="AudioStreamPlayer" parent="Kura"]
 stream = ExtResource("29_43af7")
+bus = &"SFX"

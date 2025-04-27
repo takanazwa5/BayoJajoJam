@@ -38,6 +38,7 @@ folder_colors={
 "res://garnek/": "pink",
 "res://inventory/": "yellow",
 "res://items/": "green",
+"res://main/": "blue",
 "res://main_menu/": "purple",
 "res://miska/": "teal",
 "res://patelnia/": "red",

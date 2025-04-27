@@ -190,15 +190,19 @@ libraries = {
 [node name="Ksiazka1" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_wjtj6")
+bus = &"SFX"
 
 [node name="Ksiazka2" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("5_1gesd")
+bus = &"SFX"
 
 [node name="Ksiazka3" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("6_dfq7d")
+bus = &"SFX"
 
 [node name="Ksiazka4" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("7_q7ano")
+bus = &"SFX"

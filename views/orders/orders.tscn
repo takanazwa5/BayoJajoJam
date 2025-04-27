@@ -167,21 +167,28 @@ script = ExtResource("4_vbw2n")
 
 [node name="Kurczaki1" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
 stream = ExtResource("5_rpyny")
+bus = &"SFX"
 
 [node name="Kurczaki2" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
 stream = ExtResource("6_7dhpo")
+bus = &"SFX"
 
 [node name="Kurczaki3" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
 stream = ExtResource("7_ul1bq")
+bus = &"SFX"
 
 [node name="Kurczaki4" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
 stream = ExtResource("8_qboju")
+bus = &"SFX"
 
 [node name="Kurczaki5" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
 stream = ExtResource("9_d0bqx")
+bus = &"SFX"
 
 [node name="Kurczaki6" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
 stream = ExtResource("10_xrqf6")
+bus = &"SFX"
 
 [node name="Kurczaki7" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
 stream = ExtResource("11_y1wsv")
+bus = &"SFX"

@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2xsgpjmaj43y"]
+[gd_scene load_steps=9 format=3 uid="uid://c2xsgpjmaj43y"]
 
 [ext_resource type="Script" uid="uid://ca84tam75dflk" path="res://main_menu/main_menu.gd" id="1_oa53l"]
 [ext_resource type="Texture2D" uid="uid://bryxbo7hk1fqq" path="res://main_menu/assets/BGMenu.png" id="2_d3a7t"]
-[ext_resource type="Texture2D" uid="uid://dlwopq4vu1rx7" path="res://main_menu/assets/universal-button.png" id="3_3shxk"]
+[ext_resource type="Texture2D" uid="uid://dlwopq4vu1rx7" path="res://shared/universal-button.png" id="3_3shxk"]
 [ext_resource type="Texture2D" uid="uid://buuyeml7vdi4k" path="res://main_menu/assets/Title.png" id="3_bws42"]
+[ext_resource type="AudioStream" uid="uid://dgk5khv1ogsd" path="res://main_menu/assets/ChipTuneJajoMenu.mp3" id="5_3f7m4"]
+[ext_resource type="Texture2D" uid="uid://cova0kluopn05" path="res://main_menu/assets/Credits_Page.png" id="6_6tl50"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bws42"]
 
@@ -99,6 +101,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 0
 flat = true
 
 [node name="CreditsButtonTexture" type="NinePatchRect" parent="Buttons"]
@@ -138,6 +141,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 0
 flat = true
 
 [node name="HowToPlayButtonTexture" type="NinePatchRect" parent="Buttons"]
@@ -177,4 +181,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 0
 flat = true
+
+[node name="ChipTuneJajoMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_3f7m4")
+autoplay = true
+bus = &"Music"
+
+[node name="CreditsPage" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = -154.5
+offset_right = -16.0
+offset_bottom = 154.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("6_6tl50")
