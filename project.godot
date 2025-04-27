@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BayoJajoJam"
-run/main_scene="uid://77go706q5sb7"
+run/main_scene="uid://c2xsgpjmaj43y"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -38,6 +38,7 @@ folder_colors={
 "res://garnek/": "pink",
 "res://inventory/": "yellow",
 "res://items/": "green",
+"res://main_menu/": "purple",
 "res://miska/": "teal",
 "res://patelnia/": "red",
 "res://shared/": "yellow",

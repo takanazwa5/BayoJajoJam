@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2xsgpjmaj43y"]
+
+[ext_resource type="Script" uid="uid://ca84tam75dflk" path="res://main_menu/main_menu.gd" id="1_oa53l"]
+[ext_resource type="Texture2D" uid="uid://bryxbo7hk1fqq" path="res://main_menu/assets/BGMenu.png" id="2_d3a7t"]
+[ext_resource type="Texture2D" uid="uid://dlwopq4vu1rx7" path="res://main_menu/assets/universal-button.png" id="3_3shxk"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bws42"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3f7m4"]
+font_size = 32
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oa53l")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_bws42")
+
+[node name="Babushka" type="TextureRect" parent="BG"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_d3a7t")
+
+[node name="PlayButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 45.0
+offset_top = -29.5
+offset_right = 269.0
+offset_bottom = 29.5
+grow_vertical = 2
+texture_normal = ExtResource("3_3shxk")
+
+[node name="Label" type="Label" parent="PlayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+label_settings = SubResource("LabelSettings_3f7m4")
+horizontal_alignment = 1
+vertical_alignment = 1
