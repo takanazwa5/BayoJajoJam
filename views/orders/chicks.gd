@@ -8,7 +8,7 @@ const OMLET: ItemData = preload("uid://d2aogmwvbrqhm")
 const SADZONE: ItemData = preload("uid://bjslote6cn7x7")
 const SHAKSHUKA: ItemData = preload("uid://dmobuqrx2l26q")
 const DISHES: Array[ItemData] = [JAJUWA, KOGEL, NAMIEKKO, OMLET, SADZONE, SHAKSHUKA]
-const TIME_LIMIT: int = 5
+const TIME_LIMIT: int = 30
 
 
 var fails: int = 0:
@@ -33,10 +33,12 @@ var time_left: int = TIME_LIMIT:
 
 
 @onready var timer: Timer = %Timer
+@onready var ready_dish: TextureRect = %ReadyDish
 
 
 func _ready() -> void:
 
+	get_parent().visibility_changed.connect(_on_parent_visibility_changed)
 	timer.timeout.connect(_on_timer_timeout)
 	await Main.instance.ready
 	_generate_new_order()
@@ -55,8 +57,9 @@ func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 
 func _drop_data(_at_position: Vector2, _data: Variant) -> void:
 
-	_generate_new_order()
 	GameOver.orders_completed += 1
+	ready_dish.texture = current_order.plate_sprite
+	_generate_new_order()
 
 
 func _generate_new_order() -> void:
@@ -79,3 +82,9 @@ func _on_timer_timeout() -> void:
 
 	time_left -= 1
 	Main.instance.time_left.text = str(time_left)
+
+
+func _on_parent_visibility_changed() -> void:
+
+	if not get_parent().visible:
+		ready_dish.texture = null

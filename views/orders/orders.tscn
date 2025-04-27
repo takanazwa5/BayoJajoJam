@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://btdaqi8ipmdvu" path="res://views/orders/chicks.gd" id="1_deesp"]
 [ext_resource type="Texture2D" uid="uid://ce2x7l33hsjj6" path="res://views/orders/assets/Polka_na_Kurczaki.png" id="1_e8glu"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e8glu"]
+[ext_resource type="Texture2D" uid="uid://dlmpinct0scy7" path="res://views/orders/assets/BG_Kurczaki.png" id="2_f6hf6"]
 
 [node name="Orders" type="Control"]
 layout_mode = 3
@@ -22,6 +21,18 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_e8glu")
 
+[node name="BgKurczaki" type="TextureRect" parent="BG"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 118.0
+offset_right = 596.0
+offset_bottom = 265.0
+texture = ExtResource("2_f6hf6")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+autostart = true
+
 [node name="Chicks" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -29,23 +40,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -74.0
-offset_top = -48.5
-offset_right = 74.0
-offset_bottom = 48.5
+offset_left = -150.0
+offset_top = -53.0
+offset_right = 292.0
+offset_bottom = 87.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_deesp")
 
-[node name="TextureRect" type="TextureRect" parent="Chicks"]
+[node name="ReadyDish" type="TextureRect" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -28.0
+offset_right = 193.0
+offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("PlaceholderTexture2D_e8glu")
-
-[node name="Timer" type="Timer" parent="."]
-unique_name_in_owner = true
-autostart = true
+mouse_filter = 2
+stretch_mode = 5

@@ -1,11 +1,14 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bbtuoga42htye"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bbtuoga42htye"]
 
 [ext_resource type="Script" uid="uid://crueomtp7trxi" path="res://items/item_data.gd" id="1_hr5ki"]
 [ext_resource type="Texture2D" uid="uid://dffg58eoyeex4" path="res://items/assets/kogelmogelEQ.png" id="1_joju8"]
+[ext_resource type="Texture2D" uid="uid://dmwk0hlsigtao" path="res://items/assets/KogelMogel.png" id="2_qci24"]
 
 [resource]
 script = ExtResource("1_hr5ki")
 type = 4
 icon = ExtResource("1_joju8")
 can_be_cut = false
+can_be_cooked = false
+plate_sprite = ExtResource("2_qci24")
 metadata/_custom_type_script = "uid://crueomtp7trxi"

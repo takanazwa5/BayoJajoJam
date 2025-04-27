@@ -1,7 +1,7 @@
 class_name MainMenu extends Control
 
 
-@onready var play_button: TextureButton = %PlayButton
+@onready var play_button: Button = %PlayButton
 @onready var credits_button: Button = %CreditsButton
 @onready var how_to_play_button: Button = %HowToPlayButton
 

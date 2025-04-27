@@ -18,3 +18,4 @@ enum Type {
 @export var can_be_cut: bool = false
 @export var item_after_cutting: ItemData
 @export var can_be_cooked: bool = false
+@export var plate_sprite: Texture2D
