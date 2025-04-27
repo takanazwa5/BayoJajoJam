@@ -1,13 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2xsgpjmaj43y"]
+[gd_scene load_steps=7 format=3 uid="uid://c2xsgpjmaj43y"]
 
 [ext_resource type="Script" uid="uid://ca84tam75dflk" path="res://main_menu/main_menu.gd" id="1_oa53l"]
 [ext_resource type="Texture2D" uid="uid://bryxbo7hk1fqq" path="res://main_menu/assets/BGMenu.png" id="2_d3a7t"]
 [ext_resource type="Texture2D" uid="uid://dlwopq4vu1rx7" path="res://main_menu/assets/universal-button.png" id="3_3shxk"]
+[ext_resource type="Texture2D" uid="uid://buuyeml7vdi4k" path="res://main_menu/assets/Title.png" id="3_bws42"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bws42"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3f7m4"]
-font_size = 32
+font_size = 14
 shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
@@ -42,20 +43,36 @@ grow_horizontal = 0
 grow_vertical = 0
 texture = ExtResource("2_d3a7t")
 
-[node name="PlayButton" type="TextureButton" parent="."]
-unique_name_in_owner = true
+[node name="Title" type="TextureRect" parent="BG"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 25.0
+offset_right = 361.0
+offset_bottom = 157.0
+texture = ExtResource("3_bws42")
+
+[node name="Buttons" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 45.0
-offset_top = -29.5
-offset_right = 269.0
-offset_bottom = 29.5
+offset_left = 67.0
+offset_top = 25.0
+offset_right = 203.0
+offset_bottom = 123.0
 grow_vertical = 2
-texture_normal = ExtResource("3_3shxk")
 
-[node name="Label" type="Label" parent="PlayButton"]
+[node name="PlayButtonTexture" type="NinePatchRect" parent="Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_3shxk")
+patch_margin_left = 20
+patch_margin_top = 10
+patch_margin_right = 20
+patch_margin_bottom = 10
+
+[node name="Label" type="Label" parent="Buttons/PlayButtonTexture"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -63,7 +80,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
-offset_top = -11.5
+offset_top = -14.5
 offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
@@ -72,3 +89,92 @@ text = "Play"
 label_settings = SubResource("LabelSettings_3f7m4")
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
+
+[node name="PlayButton" type="Button" parent="Buttons/PlayButtonTexture"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="CreditsButtonTexture" type="NinePatchRect" parent="Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_3shxk")
+patch_margin_left = 20
+patch_margin_top = 10
+patch_margin_right = 20
+patch_margin_bottom = 10
+
+[node name="Label" type="Label" parent="Buttons/CreditsButtonTexture"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -14.0
+offset_right = 36.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Credits"
+label_settings = SubResource("LabelSettings_3f7m4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="CreditsButton" type="Button" parent="Buttons/CreditsButtonTexture"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="HowToPlayButtonTexture" type="NinePatchRect" parent="Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_3shxk")
+patch_margin_left = 20
+patch_margin_top = 10
+patch_margin_right = 20
+patch_margin_bottom = 10
+
+[node name="Label" type="Label" parent="Buttons/HowToPlayButtonTexture"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.5
+offset_top = -14.0
+offset_right = 47.5
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "How to play"
+label_settings = SubResource("LabelSettings_3f7m4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HowToPlayButton" type="Button" parent="Buttons/HowToPlayButtonTexture"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
