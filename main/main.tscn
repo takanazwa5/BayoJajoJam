@@ -32,11 +32,11 @@ layout_mode = 1
 
 [node name="Workstation" parent="Views" instance=ExtResource("4_7mycd")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [node name="Fridge" parent="Views" instance=ExtResource("2_1bvp3")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 
 [node name="Orders" parent="Views" instance=ExtResource("5_272bh")]

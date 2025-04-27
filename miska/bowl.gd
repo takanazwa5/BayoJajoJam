@@ -170,6 +170,7 @@ func _notification(what: int) -> void:
 
 func _on_bowl_pressed() -> void:
 
+	if not state == State.MIXING_REQUIRED: return
 	Input.set_custom_mouse_cursor(null)
 	if contents["eggs"] == 1 and contents["sugar"] == 1:
 

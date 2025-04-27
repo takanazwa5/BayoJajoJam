@@ -6,9 +6,16 @@ const TRASHCAN_OPENED: Texture2D = preload("uid://bmpmmremy1obd")
 
 
 var is_dragging: bool = false
+var sfx: Array[AudioStreamPlayer]
 
 
 func _ready() -> void:
+
+	for child: Node in get_children():
+
+		if child is AudioStreamPlayer:
+
+			sfx.append(child)
 
 	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
@@ -22,6 +29,7 @@ func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 func _drop_data(_at_position: Vector2, _data: Variant) -> void:
 
 	texture = TRASHCAN_CLOSED
+	sfx.pick_random().play()
 
 
 func _notification(what: int) -> void:

@@ -139,6 +139,7 @@ theme_override_constants/margin_right = 10
 
 [node name="RightButton" type="TextureButton" parent="MarginContainer2"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 action_mode = 0
 texture_normal = ExtResource("2_qkdpp")

@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bshxnhl2qsinq"]
+[gd_scene load_steps=9 format=3 uid="uid://bshxnhl2qsinq"]
 
 [ext_resource type="Script" uid="uid://dqgip4ntxrcpb" path="res://inventory/inventory.gd" id="1_62wf1"]
 [ext_resource type="Texture2D" uid="uid://bqyj22huddo00" path="res://inventory/assets/trashcan-closed.png" id="2_lhcfm"]
 [ext_resource type="PackedScene" uid="uid://cjy44so0r353r" path="res://inventory/inventory_slot.tscn" id="2_qse2j"]
 [ext_resource type="Script" uid="uid://qik1qnpunlaj" path="res://inventory/trashcan.gd" id="3_wbsyq"]
+[ext_resource type="AudioStream" uid="uid://cg7laxr78imjh" path="res://inventory/assets/Trash1.mp3" id="4_0dv6l"]
+[ext_resource type="AudioStream" uid="uid://bcccxoup2jdl2" path="res://inventory/assets/Trash2.mp3" id="5_022t5"]
+[ext_resource type="AudioStream" uid="uid://dl1e4k2nv4m1l" path="res://inventory/assets/Trash3.mp3" id="6_locsq"]
+[ext_resource type="AudioStream" uid="uid://di8eoumllc20s" path="res://inventory/assets/Trash4.mp3" id="7_uyjf6"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
@@ -26,6 +30,22 @@ mouse_filter = 0
 texture = ExtResource("2_lhcfm")
 stretch_mode = 3
 script = ExtResource("3_wbsyq")
+
+[node name="Trash1" type="AudioStreamPlayer" parent="MarginContainer/HBoxContainer/Trashcan"]
+stream = ExtResource("4_0dv6l")
+bus = &"SFX"
+
+[node name="Trash2" type="AudioStreamPlayer" parent="MarginContainer/HBoxContainer/Trashcan"]
+stream = ExtResource("5_022t5")
+bus = &"SFX"
+
+[node name="Trash3" type="AudioStreamPlayer" parent="MarginContainer/HBoxContainer/Trashcan"]
+stream = ExtResource("6_locsq")
+bus = &"SFX"
+
+[node name="Trash4" type="AudioStreamPlayer" parent="MarginContainer/HBoxContainer/Trashcan"]
+stream = ExtResource("7_uyjf6")
+bus = &"SFX"
 
 [node name="InventorySlot" parent="MarginContainer/HBoxContainer" instance=ExtResource("2_qse2j")]
 layout_mode = 2

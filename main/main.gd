@@ -25,7 +25,7 @@ func _init() -> void:
 
 func _ready() -> void:
 
-	_current_view = workstation
+	_current_view = fridge
 
 	view_switcher.left_button.pressed.connect(_on_left_button_pressed)
 	view_switcher.right_button.pressed.connect(_on_right_button_pressed)
