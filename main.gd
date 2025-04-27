@@ -9,6 +9,7 @@ const GAME_OVER: PackedScene = preload("uid://bw4v87ccf1e2n")
 @onready var fridge: Control = %Fridge
 @onready var orders: Control = %Orders
 @onready var view_switcher: ViewSwitcher = %ViewSwitcher
+@onready var time_left: Label = %TimeLeft
 
 
 static var instance: Main

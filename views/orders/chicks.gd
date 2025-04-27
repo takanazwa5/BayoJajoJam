@@ -8,7 +8,7 @@ const OMLET: ItemData = preload("uid://d2aogmwvbrqhm")
 const SADZONE: ItemData = preload("uid://bjslote6cn7x7")
 const SHAKSHUKA: ItemData = preload("uid://dmobuqrx2l26q")
 const DISHES: Array[ItemData] = [JAJUWA, KOGEL, NAMIEKKO, OMLET, SADZONE, SHAKSHUKA]
-const TIME_LIMIT: int = 30
+const TIME_LIMIT: int = 5
 
 
 var fails: int = 0:
@@ -32,15 +32,14 @@ var time_left: int = TIME_LIMIT:
 			fails += 1
 
 
-@onready var label: Label = %Label
 @onready var timer: Timer = %Timer
 
 
 func _ready() -> void:
 
 	timer.timeout.connect(_on_timer_timeout)
+	await Main.instance.ready
 	_generate_new_order()
-	GameOver.orders_completed += 2
 
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
@@ -68,7 +67,7 @@ func _generate_new_order() -> void:
 	current_order = random_pick
 	Dymek.instance.icon.texture = current_order.icon
 	time_left = TIME_LIMIT
-	label.text = str(time_left)
+	Main.instance.time_left.text = str(time_left)
 
 
 func _complete_order() -> void:
@@ -79,4 +78,4 @@ func _complete_order() -> void:
 func _on_timer_timeout() -> void:
 
 	time_left -= 1
-	label.text = str(time_left)
+	Main.instance.time_left.text = str(time_left)

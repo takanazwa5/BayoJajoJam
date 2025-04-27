@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://77go706q5sb7"]
+[gd_scene load_steps=10 format=3 uid="uid://77go706q5sb7"]
 
 [ext_resource type="Script" uid="uid://cgyhm103hgbym" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bjgc8hno8kvux" path="res://views/fridge/fridge.tscn" id="2_1bvp3"]
@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://bshxnhl2qsinq" path="res://inventory/inventory.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cbvv7fth7ullu" path="res://view_switcher/view_switcher.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dm2lyfto0obo4" path="res://cookbook/cookbook.tscn" id="8_5vw27"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5vw27"]
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ig7tw")
@@ -45,3 +49,20 @@ layout_mode = 1
 unique_name_in_owner = true
 
 [node name="Cookbook" parent="." instance=ExtResource("8_5vw27")]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 1.0
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TimeLeft" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_5vw27")
+horizontal_alignment = 1
+vertical_alignment = 1
