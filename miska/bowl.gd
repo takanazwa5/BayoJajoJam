@@ -178,7 +178,7 @@ func _on_bowl_pressed() -> void:
 
 	elif contents["eggs"] == 2 and contents["broccoli"] == 1:
 
-		output = load("uid://d2aogmwvbrqhm")
+		output = load("uid://blpbj0j46ycn2")
 		output.set_meta(&"what", Output.OMLET)
 
 	state = State.FINISHED
