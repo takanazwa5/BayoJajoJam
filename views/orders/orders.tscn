@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw7teu3517o6d"]
+[gd_scene load_steps=12 format=3 uid="uid://bw7teu3517o6d"]
 
 [ext_resource type="Script" uid="uid://btdaqi8ipmdvu" path="res://views/orders/chicks.gd" id="1_deesp"]
 [ext_resource type="Texture2D" uid="uid://ce2x7l33hsjj6" path="res://views/orders/assets/Polka_na_Kurczaki.png" id="1_e8glu"]
 [ext_resource type="Texture2D" uid="uid://dlmpinct0scy7" path="res://views/orders/assets/BG_Kurczaki.png" id="2_f6hf6"]
+[ext_resource type="Script" uid="uid://b4g45hthkfljs" path="res://views/orders/mala_kura.gd" id="4_vbw2n"]
+[ext_resource type="AudioStream" uid="uid://cpsqtbqhpmfia" path="res://views/orders/assets/Kurczaki1.mp3" id="5_rpyny"]
+[ext_resource type="AudioStream" uid="uid://dxfbnljx4trcd" path="res://views/orders/assets/Kurczaki2.mp3" id="6_7dhpo"]
+[ext_resource type="AudioStream" uid="uid://e4ofnya64w4g" path="res://views/orders/assets/Kurczaki3.mp3" id="7_ul1bq"]
+[ext_resource type="AudioStream" uid="uid://2oay41aik60q" path="res://views/orders/assets/Kurczaki4.mp3" id="8_qboju"]
+[ext_resource type="AudioStream" uid="uid://b35atxs7p7ocq" path="res://views/orders/assets/Kurczaki5.mp3" id="9_d0bqx"]
+[ext_resource type="AudioStream" uid="uid://clchkrpt04m11" path="res://views/orders/assets/Kurczaki6.mp3" id="10_xrqf6"]
+[ext_resource type="AudioStream" uid="uid://bcu8iy16bhh7t" path="res://views/orders/assets/Kurczaki7.mp3" id="11_y1wsv"]
 
 [node name="Orders" type="Control"]
 layout_mode = 3
@@ -64,3 +72,116 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 stretch_mode = 5
+
+[node name="MalaKura" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -98.0
+offset_top = -153.0
+offset_right = -48.0
+offset_bottom = -103.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+action_mode = 0
+flat = true
+script = ExtResource("4_vbw2n")
+
+[node name="MalaKura2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -142.0
+offset_top = -236.0
+offset_right = -92.0
+offset_bottom = -186.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+action_mode = 0
+flat = true
+script = ExtResource("4_vbw2n")
+
+[node name="MalaKura3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -390.0
+offset_top = -164.0
+offset_right = -340.0
+offset_bottom = -114.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+action_mode = 0
+flat = true
+script = ExtResource("4_vbw2n")
+
+[node name="MalaKura4" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -455.0
+offset_top = -194.0
+offset_right = -405.0
+offset_bottom = -144.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+action_mode = 0
+flat = true
+script = ExtResource("4_vbw2n")
+
+[node name="MalaKura5" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -407.0
+offset_top = -233.0
+offset_right = -357.0
+offset_bottom = -183.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+action_mode = 0
+flat = true
+script = ExtResource("4_vbw2n")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Kurczaki1" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
+stream = ExtResource("5_rpyny")
+
+[node name="Kurczaki2" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
+stream = ExtResource("6_7dhpo")
+
+[node name="Kurczaki3" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
+stream = ExtResource("7_ul1bq")
+
+[node name="Kurczaki4" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
+stream = ExtResource("8_qboju")
+
+[node name="Kurczaki5" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
+stream = ExtResource("9_d0bqx")
+
+[node name="Kurczaki6" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
+stream = ExtResource("10_xrqf6")
+
+[node name="Kurczaki7" type="AudioStreamPlayer" parent="SFX" groups=["SFX"]]
+stream = ExtResource("11_y1wsv")
