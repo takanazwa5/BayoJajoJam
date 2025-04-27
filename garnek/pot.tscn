@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cw8ofy0df5kai"]
+[gd_scene load_steps=7 format=3 uid="uid://cw8ofy0df5kai"]
 
 [ext_resource type="Texture2D" uid="uid://crtptr63l2pfs" path="res://garnek/assets/Garnek.png" id="1_665b5"]
 [ext_resource type="Script" uid="uid://b00o2ibs2yl2y" path="res://garnek/pot.gd" id="2_y8p1j"]
 [ext_resource type="Texture2D" uid="uid://bbw0iuoyw3r6l" path="res://shared/bar-empty.png" id="3_r2diu"]
 [ext_resource type="Texture2D" uid="uid://bkfp32q4pgdao" path="res://shared/bar-full.png" id="4_mtt5j"]
+[ext_resource type="AudioStream" uid="uid://cpqy1r3e8r7gl" path="res://garnek/assets/Boiling.mp3" id="5_mtt5j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_r2diu"]
 shadow_size = 8
@@ -45,3 +46,7 @@ label_settings = SubResource("LabelSettings_r2diu")
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
+
+[node name="Boiling" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_mtt5j")

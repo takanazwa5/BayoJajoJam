@@ -22,6 +22,7 @@ var state: State:
 			timer.stop()
 			texture = GARNEK
 			progress_bar.hide()
+			boiling.stop()
 
 		elif state == State.COOKING:
 
@@ -30,6 +31,8 @@ var state: State:
 			texture = GARNEK_JAJO
 			progress_bar.show()
 			label.text = "COOKING"
+			boiling.play()
+
 
 		elif state == State.BURNING:
 
@@ -50,6 +53,7 @@ var output: ItemData
 @onready var progress_bar: TextureProgressBar = %ProgressBar
 @onready var timer: Timer = %Timer
 @onready var label: Label = %Label
+@onready var boiling: AudioStreamPlayer = %Boiling
 
 
 func _ready() -> void:

@@ -10,7 +10,6 @@ var item_data : ItemData:
 
 
 @onready var texture_rect: TextureRect = %TextureRect
-@onready var sfx: Array[AudioStreamPlayer] = [%TakeBase1, %TakeBase2, %TakeBase3]
 
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
@@ -22,13 +21,11 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 
 	assert(data is ItemData)
 	item_data = data
-	sfx[randi_range(0, 2)].play()
 
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 
 	if is_empty(): return
-	sfx[randi_range(0, 2)].play()
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	var preview_texture: TextureRect = TextureRect.new()
 	preview_texture.texture = texture_rect.texture
@@ -50,7 +47,6 @@ func _notification(what: int) -> void:
 		if not is_drag_successful() and not is_empty():
 
 			texture_rect.texture = item_data.icon
-			sfx[randi_range(0, 2)].play()
 
 		elif not texture_rect.texture is Texture2D:
 

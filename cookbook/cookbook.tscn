@@ -1,8 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://dm2lyfto0obo4"]
+[gd_scene load_steps=12 format=3 uid="uid://dm2lyfto0obo4"]
 
 [ext_resource type="Script" uid="uid://br6gbbkpcr7ab" path="res://cookbook/cookbook.gd" id="1_tgluu"]
 [ext_resource type="Texture2D" uid="uid://dov8u0muu325d" path="res://cookbook/assets/ksiazka-kucharska-button.png" id="2_1qgfj"]
 [ext_resource type="Texture2D" uid="uid://da6xqrml13bhy" path="res://cookbook/assets/receptury.png" id="3_fet7r"]
+[ext_resource type="AudioStream" uid="uid://spktaqlpruo5" path="res://cookbook/assets/Ksiazka1.mp3" id="4_wjtj6"]
+[ext_resource type="AudioStream" uid="uid://bq1dmwx852rmd" path="res://cookbook/assets/Ksiazka2.mp3" id="5_1gesd"]
+[ext_resource type="AudioStream" uid="uid://dy5b6b8ntj1bc" path="res://cookbook/assets/Ksiazka3.mp3" id="6_dfq7d"]
+[ext_resource type="AudioStream" uid="uid://dcg0e44qnac1s" path="res://cookbook/assets/Ksiazka4.mp3" id="7_q7ano"]
 
 [sub_resource type="Animation" id="Animation_aou47"]
 length = 0.001
@@ -182,3 +186,19 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_4gqgo")
 }
+
+[node name="Ksiazka1" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_wjtj6")
+
+[node name="Ksiazka2" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_1gesd")
+
+[node name="Ksiazka3" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_dfq7d")
+
+[node name="Ksiazka4" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_q7ano")
